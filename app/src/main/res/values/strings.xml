@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">MarvelApp</string>
+    <string name="title_quiz">GUESS THE SUPERHERO</string>
+    <string name="btn_hint">Use a Hint</string>
+    <string name="btn_confirm">Confirm</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="title_notifications">Notifications</string>
