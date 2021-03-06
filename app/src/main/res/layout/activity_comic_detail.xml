@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/marvel_logo"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_imagem_heroi"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.623">
+
+        <TextView
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:id="@+id/txt_name_heroi"
+            android:layout_width="214dp"
+            android:layout_height="wrap_content"
+            android:text="Amazing Spider-Man
+            (1963-1998) #101: Facsmile Edition"
+            android:textColor="#EDEDED"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <android.widget.Button
+            android:id="@+id/button"
+            android:layout_width="194dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/botao_costumizado"
+            android:text="Buy Here"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/marvel_logo_dois"
+        app:layout_constraintBottom_toTopOf="@+id/iv_imagem_heroi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.272" />
+
+    <ImageView
+        android:id="@+id/iv_imagem_heroi"
+        android:layout_width="155dp"
+        android:layout_height="213dp"
+        android:layout_marginBottom="7dp"
+        android:src="@drawable/spider"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="328dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/txt_name_autor"
+            android:layout_width="217dp"
+            android:layout_height="23dp"
+            android:text="By: Roy Thomas, Gil Kane"
+            android:textColor="#EDEDED"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="357dp" />
+
+        <TextView
+            android:id="@+id/txt_quadrinho_data"
+            android:layout_width="217dp"
+            android:layout_height="23dp"
+            android:text="Released: Feb 3, 2021"
+            android:textColor="#EDEDED"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="380dp" />
+
+        <TextView
+            android:id="@+id/txt_quadrinho_paginas"
+            android:layout_width="217dp"
+            android:layout_height="23dp"
+            android:text="Pages: 36"
+            android:textColor="#EDEDED"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/txt_quadrinho_data"
+            tools:layout_editor_absoluteY="403dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.27"
+        tools:layout_editor_absoluteX="16dp">
+
+        <TextView
+            android:id="@+id/txt_quadrinho_titulo"
+            android:layout_width="217dp"
+            android:layout_height="wrap_content"
+            android:text="Summary"
+            android:textColor="#EDEDED"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="475dp" />
+
+        <TextView
+            android:id="@+id/txt_quadrinho_sinopse"
+            android:layout_width="match_parent"
+            android:layout_height="283dp"
+            android:text="The dramatic debut of Morbius the Living Vampire!Dr. Michael Morbius has a lust for blood,and he’s out to sink his fangs into Spider-Man! But the wallcrawleris even more spiderlike than usual - because, in an effort to “cure” himself of his spider-poewers,he’s ended up with four extra limbs! Peter must seek out Curt Connors"
+            android:textColor="#EDEDED"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="505dp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
