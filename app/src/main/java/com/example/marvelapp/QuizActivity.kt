@@ -14,5 +14,9 @@ class QuizActivity : AppCompatActivity() {
 
         imgNeg.setImageResource(R.drawable.icon_minus)
         imgPos.setImageResource(R.drawable.icon_plus)
+
+        val imgHero = findViewById<ImageView>(R.id.img_hero_quiz)
+        imgHero.clipToOutline = true
     }
+
 }
