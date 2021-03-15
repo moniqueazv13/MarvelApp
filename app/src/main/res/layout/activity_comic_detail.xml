@@ -15,24 +15,24 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/iv_imagem_heroi"
+        app:layout_constraintStart_toEndOf="@+id/iv_comic_image_details"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.623">
 
         <TextView
-            android:textAlignment="center"
-            android:layout_gravity="center"
-            android:id="@+id/txt_name_heroi"
+            android:id="@+id/txt_comic_name_details"
             android:layout_width="214dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="Amazing Spider-Man
             (1963-1998) #101: Facsmile Edition"
+            android:textAlignment="center"
             android:textColor="#EDEDED"
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <android.widget.Button
-            android:id="@+id/button"
+            android:id="@+id/button_buy"
             android:layout_width="194dp"
             android:layout_height="45dp"
             android:layout_gravity="center"
@@ -44,12 +44,13 @@
     </LinearLayout>
 
     <ImageView
+        android:id="@+id/logo_marvel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
         android:layout_marginBottom="10dp"
         android:src="@drawable/marvel_logo_dois"
-        app:layout_constraintBottom_toTopOf="@+id/iv_imagem_heroi"
+        app:layout_constraintBottom_toTopOf="@+id/iv_comic_image_details"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +58,7 @@
         app:layout_constraintVertical_bias="0.272" />
 
     <ImageView
-        android:id="@+id/iv_imagem_heroi"
+        android:id="@+id/iv_comic_image_details"
         android:layout_width="155dp"
         android:layout_height="213dp"
         android:layout_marginBottom="7dp"
@@ -81,7 +82,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:id="@+id/txt_name_autor"
+            android:id="@+id/txt_author_name"
             android:layout_width="217dp"
             android:layout_height="23dp"
             android:text="By: Roy Thomas, Gil Kane"
@@ -92,7 +93,7 @@
             tools:layout_editor_absoluteY="357dp" />
 
         <TextView
-            android:id="@+id/txt_quadrinho_data"
+            android:id="@+id/txt_comic_date"
             android:layout_width="217dp"
             android:layout_height="23dp"
             android:text="Released: Feb 3, 2021"
@@ -103,14 +104,14 @@
             tools:layout_editor_absoluteY="380dp" />
 
         <TextView
-            android:id="@+id/txt_quadrinho_paginas"
+            android:id="@+id/txt_comic_pages"
             android:layout_width="217dp"
             android:layout_height="23dp"
             android:text="Pages: 36"
             android:textColor="#EDEDED"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/txt_quadrinho_data"
+            app:layout_constraintEnd_toEndOf="@+id/txt_comic_date"
             tools:layout_editor_absoluteY="403dp" />
     </LinearLayout>
 
@@ -126,7 +127,7 @@
         tools:layout_editor_absoluteX="16dp">
 
         <TextView
-            android:id="@+id/txt_quadrinho_titulo"
+            android:id="@+id/txt_comic_title"
             android:layout_width="217dp"
             android:layout_height="wrap_content"
             android:text="Summary"
@@ -137,7 +138,7 @@
             tools:layout_editor_absoluteY="475dp" />
 
         <TextView
-            android:id="@+id/txt_quadrinho_sinopse"
+            android:id="@+id/txt_synopsis_comic"
             android:layout_width="match_parent"
             android:layout_height="283dp"
             android:text="The dramatic debut of Morbius the Living Vampire!Dr. Michael Morbius has a lust for blood,and he’s out to sink his fangs into Spider-Man! But the wallcrawleris even more spiderlike than usual - because, in an effort to “cure” himself of his spider-poewers,he’s ended up with four extra limbs! Peter must seek out Curt Connors"

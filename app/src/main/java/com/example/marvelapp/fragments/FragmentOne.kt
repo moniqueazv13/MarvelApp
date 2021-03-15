@@ -8,14 +8,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.marvelapp.R
-import com.example.marvelapp.recyclerview.Heroes
-import com.example.marvelapp.recyclerview.HeroesAdapter
+import com.example.marvelapp.recyclerview.Comics
+import com.example.marvelapp.recyclerview.ComicsAdapter
 
 
 class FragmentOne : Fragment() {
     lateinit var recycler : RecyclerView
 
-    private var heroesList = mutableListOf<Heroes>()
+    private var comicsList = mutableListOf<Comics>()
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -26,11 +26,11 @@ class FragmentOne : Fragment() {
 
         initView(view)
 
-        val heroes = getHeroes()
+        val comics = getComics()
 
 //        recycler.layoutManager = LinearLayoutManager(context)
         recycler.layoutManager = GridLayoutManager(context, 3)
-        val adapter = HeroesAdapter(heroes)
+        val adapter = ComicsAdapter(comics)
         recycler.adapter = adapter
 
         return view
@@ -43,15 +43,15 @@ class FragmentOne : Fragment() {
 
 
 
-    private fun getHeroes(): MutableList<Heroes> {
+    private fun getComics(): MutableList<Comics> {
 
-        heroesList.add(Heroes("Spider-Man",
+        comicsList.add(Comics("Spider-Man",
                 R.drawable.spider))
-        heroesList.add(Heroes("Spider-Man",
+        comicsList.add(Comics("Spider-Man",
                 R.drawable.spider))
-        heroesList.add(Heroes("Spider-Man",
+        comicsList.add(Comics("Spider-Man",
                 R.drawable.spider))
-        return heroesList
+        return comicsList
 
     }
 }
