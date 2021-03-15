@@ -1,4 +1,4 @@
-package com.example.marvelapp.recyclerview
+package com.example.marvelapp.comics
 
 import android.os.Bundle
 import android.widget.ImageView
@@ -6,6 +6,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.marvelapp.R
+import com.example.marvelapp.comics.model.Comics
 
 class DetailsComicsActivity : AppCompatActivity() {
     val comicNametxt by lazy { findViewById<TextView>(R.id.txt_comic_name_details) }

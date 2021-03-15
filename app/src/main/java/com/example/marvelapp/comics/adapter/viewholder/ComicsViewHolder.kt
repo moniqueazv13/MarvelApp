@@ -1,4 +1,4 @@
-package com.example.marvelapp.recyclerview
+package com.example.marvelapp.comics.adapter.viewholder
 
 import android.view.View
 import android.widget.ImageView
