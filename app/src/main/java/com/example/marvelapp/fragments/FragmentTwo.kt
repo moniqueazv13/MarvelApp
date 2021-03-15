@@ -47,15 +47,13 @@ class FragmentTwo : Fragment() {
 
     private fun getHeroes(): MutableList<Heroes> {
 
-        heroesList.add(Heroes("Spider-Man",
+        heroesList.add(Heroes("BLACK WIDOW",
                 R.drawable.hero_image))
-        heroesList.add(Heroes("Spider-Man",
+        heroesList.add(Heroes("BLACK WIDOW",
                 R.drawable.hero_image))
-        heroesList.add(Heroes("Spider-Man",
+        heroesList.add(Heroes("BLACK WIDOW",
                 R.drawable.hero_image))
-        heroesList.add(Heroes("Spider-Man",
-                R.drawable.hero_image))
-        heroesList.add(Heroes("Spider-Man",
+        heroesList.add(Heroes("BLACK WIDOW",
                 R.drawable.hero_image))
         return heroesList
 

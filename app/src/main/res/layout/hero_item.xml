@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="180dp"
-    android:layout_height="215dp"
+    android:layout_height="250dp"
     android:maxHeight="250dp"
     android:scrollbarSize="14sp"
-    android:layout_margin="10dp"
+    android:layout_margin="4dp"
+    card_view:strokeColor="@color/white"
+    card_view:cardCornerRadius="0dp"
+    card_view:strokeWidth="1dp"
     card_view:cardBackgroundColor="@color/cinza_escuro">
 
     <LinearLayout
-        android:layout_width="180dp"
-        android:layout_height="215dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/iv_hero_image"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="188dp"
             android:scaleType="fitXY"
-            android:layout_height="140dp"
             android:src="@drawable/hero_image" />
 
         <TextView
@@ -31,11 +34,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textAlignment="center"
+            android:textAlignment="viewStart"
+            android:layout_marginLeft="10dp"
             android:textColor="#FFFFFF"
             android:textSize="14dp"
             android:fontFamily="@font/roboto_regular"
             android:textStyle="bold"
             tools:text="Homem-Aranha" />
     </LinearLayout>
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>
