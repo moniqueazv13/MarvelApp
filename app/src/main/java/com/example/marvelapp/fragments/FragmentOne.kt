@@ -51,6 +51,10 @@ class FragmentOne : Fragment() {
                 R.drawable.spider))
         comicsList.add(Comics("Spider-Man",
                 R.drawable.spider))
+        comicsList.add(Comics("Spider-Man",
+                R.drawable.spider))
+        comicsList.add(Comics("Spider-Man",
+                R.drawable.spider))
         return comicsList
 
     }

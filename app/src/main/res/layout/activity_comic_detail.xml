@@ -4,87 +4,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/marvel_logo"
-    android:padding="10dp">
+    android:background="@drawable/marvel_logo">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="0dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/iv_comic_image_details"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.623">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/txt_comic_name_details"
-            android:layout_width="214dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_width="211dp"
+            android:layout_height="76dp"
+            android:fontFamily="@font/robotocondensed_regular"
             android:text="Amazing Spider-Man
             (1963-1998) #101: Facsmile Edition"
-            android:textAlignment="center"
+            android:textAlignment="viewStart"
             android:textColor="#EDEDED"
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <android.widget.Button
             android:id="@+id/button_buy"
-            android:layout_width="194dp"
-            android:layout_height="45dp"
-            android:layout_gravity="center"
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
             android:layout_marginTop="20dp"
             android:background="@drawable/botao_costumizado"
             android:text="Buy Here"
             android:textColor="#FFFFFF" />
-
     </LinearLayout>
 
     <ImageView
         android:id="@+id/logo_marvel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/marvel_logo_dois"
-        app:layout_constraintBottom_toTopOf="@+id/iv_comic_image_details"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.272" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/iv_comic_image_details"
         android:layout_width="155dp"
         android:layout_height="213dp"
-        android:layout_marginBottom="7dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="40dp"
         android:src="@drawable/spider"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/logo_marvel" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="328dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_comic_image_details">
 
         <TextView
             android:id="@+id/txt_author_name"
             android:layout_width="217dp"
             android:layout_height="23dp"
+            android:fontFamily="@font/robotocondensed_regular"
             android:text="By: Roy Thomas, Gil Kane"
             android:textColor="#EDEDED"
             android:textSize="18sp"
@@ -94,8 +82,9 @@
 
         <TextView
             android:id="@+id/txt_comic_date"
-            android:layout_width="217dp"
+            android:layout_width="match_parent"
             android:layout_height="23dp"
+            android:fontFamily="@font/robotocondensed_regular"
             android:text="Released: Feb 3, 2021"
             android:textColor="#EDEDED"
             android:textSize="18sp"
@@ -106,7 +95,8 @@
         <TextView
             android:id="@+id/txt_comic_pages"
             android:layout_width="217dp"
-            android:layout_height="23dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotocondensed_regular"
             android:text="Pages: 36"
             android:textColor="#EDEDED"
             android:textSize="18sp"
@@ -118,21 +108,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="20dp"
         android:orientation="vertical"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.27"
-        tools:layout_editor_absoluteX="16dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <TextView
             android:id="@+id/txt_comic_title"
             android:layout_width="217dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/robotocondensed_regular"
             android:text="Summary"
             android:textColor="#EDEDED"
-            android:textSize="23sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="30dp"
             tools:layout_editor_absoluteY="475dp" />
@@ -141,13 +132,14 @@
             android:id="@+id/txt_synopsis_comic"
             android:layout_width="match_parent"
             android:layout_height="283dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/robotocondensed_regular"
             android:text="The dramatic debut of Morbius the Living Vampire!Dr. Michael Morbius has a lust for blood,and he’s out to sink his fangs into Spider-Man! But the wallcrawleris even more spiderlike than usual - because, in an effort to “cure” himself of his spider-poewers,he’s ended up with four extra limbs! Peter must seek out Curt Connors"
             android:textColor="#EDEDED"
             android:textSize="22sp"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="28dp"
             tools:layout_editor_absoluteY="505dp" />
-
     </LinearLayout>
 
 
