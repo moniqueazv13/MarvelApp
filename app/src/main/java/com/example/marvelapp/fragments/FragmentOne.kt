@@ -15,7 +15,7 @@ import com.example.marvelapp.recyclerview.HeroesAdapter
 class FragmentOne : Fragment() {
     lateinit var recycler : RecyclerView
 
-    private var heroisList = mutableListOf<Heroes>()
+    private var heroesList = mutableListOf<Heroes>()
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -26,11 +26,11 @@ class FragmentOne : Fragment() {
 
         initView(view)
 
-        val contatos = getContatos()
+        val heroes = getHeroes()
 
 //        recycler.layoutManager = LinearLayoutManager(context)
         recycler.layoutManager = GridLayoutManager(context, 3)
-        val adapter = HeroesAdapter(contatos)
+        val adapter = HeroesAdapter(heroes)
         recycler.adapter = adapter
 
         return view
@@ -43,15 +43,15 @@ class FragmentOne : Fragment() {
 
 
 
-    private fun getContatos(): MutableList<Heroes> {
+    private fun getHeroes(): MutableList<Heroes> {
 
-        heroisList.add(Heroes("Spider-Man",
+        heroesList.add(Heroes("Spider-Man",
                 R.drawable.spider))
-        heroisList.add(Heroes("Spider-Man",
+        heroesList.add(Heroes("Spider-Man",
                 R.drawable.spider))
-        heroisList.add(Heroes("Spider-Man",
+        heroesList.add(Heroes("Spider-Man",
                 R.drawable.spider))
-        return heroisList
+        return heroesList
 
     }
 }
