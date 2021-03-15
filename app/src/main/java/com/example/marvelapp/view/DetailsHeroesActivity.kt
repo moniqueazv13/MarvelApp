@@ -1,4 +1,4 @@
-package com.example.marvelapp.heroes
+package com.example.marvelapp.view
 
 import android.os.Bundle
 import android.widget.ImageView

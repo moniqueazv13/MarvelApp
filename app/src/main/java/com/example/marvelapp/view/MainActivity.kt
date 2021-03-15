@@ -1,8 +1,9 @@
-package com.example.marvelapp
+package com.example.marvelapp.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.fragment.recycler.model.fragments.adapter.MyPagerAdapter
+import com.example.marvelapp.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

@@ -5,8 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.marvelapp.R
-import com.example.marvelapp.comics.DetailsComicsActivity
-import com.example.marvelapp.heroes.DetailsHeroesActivity
+import com.example.marvelapp.view.DetailsHeroesActivity
 import com.example.marvelapp.heroes.adapter.viewholder.HeroesViewHolder
 import com.example.marvelapp.heroes.model.Heroes
 

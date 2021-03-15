@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.marvelapp.R
 import com.example.marvelapp.comics.model.Comics
 import com.example.marvelapp.comics.adapter.viewholder.ComicsViewHolder
-import com.example.marvelapp.comics.DetailsComicsActivity
+import com.example.marvelapp.view.DetailsComicsActivity
 
 class ComicsAdapter(private val comicsList: MutableList<Comics>): RecyclerView.Adapter<ComicsViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ComicsViewHolder {
