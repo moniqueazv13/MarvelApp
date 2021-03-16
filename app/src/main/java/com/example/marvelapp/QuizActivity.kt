@@ -9,6 +9,10 @@ class QuizActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
 
+        initViews()
+    }
+
+    private fun initViews(){
         val imgNeg = findViewById<ImageView>(R.id.img_minus)
         val imgPos = findViewById<ImageView>(R.id.img_plus)
 
