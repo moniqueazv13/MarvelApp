@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="180dp"
     android:layout_height="250dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginStart="6dp"
+    android:layout_marginEnd="6dp"
     android:maxHeight="250dp"
     android:scrollbarSize="14sp"
-    android:layout_margin="4dp"
-    card_view:strokeColor="@color/white"
+    card_view:cardBackgroundColor="@color/cinza_escuro"
     card_view:cardCornerRadius="0dp"
-    card_view:strokeWidth="1dp"
-    card_view:cardBackgroundColor="@color/cinza_escuro">
+    card_view:strokeColor="@color/white"
+    card_view:strokeWidth="1dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,11 +22,11 @@
         <ImageView
             android:id="@+id/iv_hero_image"
             android:layout_width="match_parent"
-            android:layout_height="188dp"
+            android:layout_height="170dp"
             android:scaleType="fitXY"
             android:src="@drawable/hero_image" />
 
-        <TextView
+        <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="@color/vermelho" />
@@ -33,12 +35,12 @@
             android:id="@+id/tv_hero_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_regular"
             android:textAlignment="viewStart"
-            android:layout_marginLeft="10dp"
             android:textColor="#FFFFFF"
             android:textSize="14dp"
-            android:fontFamily="@font/roboto_regular"
             android:textStyle="bold"
             tools:text="Homem-Aranha" />
     </LinearLayout>

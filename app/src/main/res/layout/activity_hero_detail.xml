@@ -9,13 +9,12 @@
 
     <TextView
         android:id="@+id/txt_hero_name_details"
-        android:layout_width="211dp"
-        android:layout_height="76dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="110dp"
         android:fontFamily="@font/robotocondensed_regular"
-        android:text="Amazing Spider-Man
-            (1963-1998) #101: Facsmile Edition"
+        tools:text="Black Widow"
         android:textAlignment="viewStart"
         android:textColor="#EDEDED"
         android:textSize="20sp"
@@ -36,7 +35,7 @@
         android:id="@+id/iv_hero_image_details"
         android:layout_width="155dp"
         android:layout_height="213dp"
-        android:layout_marginStart="6dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="40dp"
         android:scaleType="fitXY"
         android:src="@drawable/hero_image"
@@ -47,11 +46,10 @@
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/txt_hero_name_details"
-        app:layout_constraintStart_toEndOf="@id/iv_hero_image_details">
+        app:layout_constraintStart_toStartOf="@id/txt_hero_name_details">
 
         <TextView
             android:id="@+id/txt_author_name"
@@ -60,10 +58,8 @@
             android:fontFamily="@font/robotocondensed_regular"
             android:text="By: Roy Thomas, Gil Kane"
             android:textColor="#EDEDED"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="357dp" />
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/txt_comic_date"
@@ -72,10 +68,8 @@
             android:fontFamily="@font/robotocondensed_regular"
             android:text="Released: Feb 3, 2021"
             android:textColor="#EDEDED"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="380dp" />
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/txt_comic_pages"
@@ -84,37 +78,35 @@
             android:fontFamily="@font/robotocondensed_regular"
             android:text="Pages: 36"
             android:textColor="#EDEDED"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/txt_comic_date"
-            tools:layout_editor_absoluteY="403dp" />
+            app:layout_constraintEnd_toEndOf="@+id/txt_comic_date"/>
     </LinearLayout>
 
     <TextView
-        android:id="@+id/txt_synopsis_comic"
-        android:layout_width="match_parent"
-        android:layout_height="283dp"
-        android:layout_marginTop="20dp"
+        android:id="@+id/txt_synopsis_hero"
+        android:layout_width="392dp"
+        android:layout_height="201dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/robotocondensed_regular"
-        android:text="The dramatic debut of Morbius the Living Vampire!Dr. Michael Morbius has a lust for blood,and he’s out to sink his fangs into Spider-Man! But the wallcrawleris even more spiderlike than usual - because, in an effort to “cure” himself of his spider-poewers,he’s ended up with four extra limbs! Peter must seek out Curt Connors"
         android:textColor="#EDEDED"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/txt_comic_title"
-        tools:layout_editor_absoluteX="9dp" />
+        app:layout_constraintStart_toStartOf="@+id/txt_sumary_title"
+        app:layout_constraintTop_toBottomOf="@+id/txt_sumary_title"
+        android:text="The dramatic debut of Morbius the Living Vampire!Dr. Michael Morbius has a lust for blood,and he’s out to sink his fangs into Spider-Man! But the wallcrawleris even more spiderlike than usual - because, in an effort to “cure” himself of his spider-poewers,he’s ended up with four extra limbs! Peter must seek out Curt Connors" />
 
     <TextView
-        android:id="@+id/txt_comic_title"
+        android:id="@+id/txt_sumary_title"
         android:layout_width="217dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/robotocondensed_regular"
         android:text="Summary"
         android:textColor="#EDEDED"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/iv_hero_image_details"
+        app:layout_constraintStart_toStartOf="@id/iv_hero_image_details"
         tools:layout_editor_absoluteX="2dp" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
