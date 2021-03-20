@@ -1,6 +1,7 @@
 package com.example.marvelapp
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -21,6 +22,25 @@ class QuizActivity : AppCompatActivity() {
 
         val imgHero = findViewById<ImageView>(R.id.img_hero_quiz)
         imgHero.clipToOutline = true
+
+        val btHint = findViewById<Button>(R.id.bt_hint)
+        val btConfirm = findViewById<Button>(R.id.bt_confirm)
+
+        btHint.setOnClickListener {
+            onShowFragment()
+        }
+
+        btConfirm.setOnClickListener {
+            onShowFragmentRight()
+        }
+    }
+
+    private fun onShowFragmentRight() {
+        FragmentConfirmRight().show(supportFragmentManager,"FragmentConfirmRight")
+    }
+
+    private fun onShowFragment() {
+       FragmentHint().show(supportFragmentManager, "FragmentHint")
     }
 
 }
