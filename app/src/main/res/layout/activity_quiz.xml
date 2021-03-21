@@ -149,6 +149,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/et_answer"
         android:text="@string/btn_hint"
+        android:textAllCaps="false"
         android:textStyle="bold"
         android:background="@drawable/my_bt_hint"/>
 
@@ -161,6 +162,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/et_answer"
         android:text="@string/btn_confirm"
+        android:textAllCaps="false"
         android:textStyle="bold"
         android:background="@drawable/my_bt_confirm"/>
 
