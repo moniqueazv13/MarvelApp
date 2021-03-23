@@ -6,7 +6,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.marvelapp.R
-import com.example.marvelapp.comics.model.Comics
 import com.example.marvelapp.heroes.model.Heroes
 
 class DetailsHeroesActivity : AppCompatActivity() {

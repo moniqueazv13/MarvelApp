@@ -9,7 +9,13 @@ import com.example.marvelapp.comics.model.Comics
 import com.example.marvelapp.comics.adapter.viewholder.ComicsViewHolder
 import com.example.marvelapp.view.DetailsComicsActivity
 
-class ComicsAdapter(private val comicsList: MutableList<Comics>): RecyclerView.Adapter<ComicsViewHolder>() {
+class ComicsAdapter() : RecyclerView.Adapter<ComicsViewHolder>() {
+    var comicsList = mutableListOf<Comics>()
+    set(value) {
+        field = value
+        notifyDataSetChanged()
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ComicsViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.comic_item,
                 parent,

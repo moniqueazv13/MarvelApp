@@ -1,4 +1,4 @@
-package com.example.fragment.recycler.model.fragments
+package com.example.marvelapp.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,46 +12,41 @@ import com.example.marvelapp.comics.model.Comics
 import com.example.marvelapp.comics.adapter.ComicsAdapter
 
 
-class FragmentOne : Fragment() {
+class FragmentOne : Fragment(R.layout.fragment_one) {
     lateinit var recycler : RecyclerView
 
     private var comicsList = mutableListOf<Comics>()
 
-    override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
-    ): View? {
+    private val  adapter  by lazy { ComicsAdapter() }
 
-        val view = inflater.inflate(R.layout.fragment_one, container, false)
 
-        initView(view)
+    override fun onResume() {
+        super.onResume()
 
-        val comics = getComics()
-
-//        recycler.layoutManager = LinearLayoutManager(context)
-        recycler.layoutManager = GridLayoutManager(context, 3)
-        val adapter = ComicsAdapter(comics)
         recycler.adapter = adapter
-
-        return view
-
+        adapter.comicsList = comicsList
     }
 
-    private fun initView(view: View) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         recycler = view.findViewById<RecyclerView>(R.id.recycler_view)
+        getComics()
+
+        recycler.adapter = adapter
+        adapter.comicsList = comicsList
+
+
     }
 
+    private fun getComics() {
 
-
-    private fun getComics(): MutableList<Comics> {
-
+        comicsList.clear()
         comicsList.add(Comics("Spider-Man",
                 R.drawable.spider))
         comicsList.add(Comics("Spider-Man",
                 R.drawable.spider))
         comicsList.add(Comics("Spider-Man",
                 R.drawable.spider))
-        return comicsList
 
     }
 }

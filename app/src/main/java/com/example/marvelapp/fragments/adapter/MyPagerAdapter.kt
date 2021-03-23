@@ -1,12 +1,12 @@
-package com.example.fragment.recycler.model.fragments.adapter
+package com.example.marvelapp.fragments.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.example.fragment.recycler.model.fragments.FragmentOne
-import com.example.fragment.recycler.model.fragments.FragmentTwo
+import com.example.marvelapp.fragments.FragmentOne
+import com.example.marvelapp.fragments.FragmentTwo
 
-class MyPagerAdapter(fm :FragmentManager) : FragmentPagerAdapter(fm) {
+class MyPagerAdapter(fm :FragmentManager) : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
     override fun getCount(): Int {
         return 2
     }
