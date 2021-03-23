@@ -5,16 +5,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.marvelapp.R
-import com.example.marvelapp.comics.model.Comics
 import com.example.marvelapp.comics.adapter.viewholder.ComicsViewHolder
+import com.example.marvelapp.comics.model.Comics
 import com.example.marvelapp.view.DetailsComicsActivity
 
-class ComicsAdapter() : RecyclerView.Adapter<ComicsViewHolder>() {
-    var comicsList = mutableListOf<Comics>()
-    set(value) {
-        field = value
-        notifyDataSetChanged()
-    }
+class ComicsAdapter(val comicsList: MutableList<Comics>) : RecyclerView.Adapter<ComicsViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ComicsViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.comic_item,

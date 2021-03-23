@@ -2,17 +2,14 @@ package com.example.marvelapp.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.marvelapp.R
 import com.example.marvelapp.heroes.adapter.HeroesAdapter
 import com.example.marvelapp.heroes.model.Heroes
 
 class FragmentTwo : Fragment(R.layout.fragment_two) {
-    lateinit var recycler : RecyclerView
+    lateinit var recycler: RecyclerView
 
     private var heroesList = mutableListOf<Heroes>()
 
