@@ -83,3 +83,4 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+/.idea/modules/app/projeto.MarvelApp.app.iml
