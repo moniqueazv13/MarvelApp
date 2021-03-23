@@ -3,29 +3,26 @@ package com.example.marvelapp.fragments.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.example.marvelapp.fragments.FragmentOne
-import com.example.marvelapp.fragments.FragmentTwo
 
 class MyPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+
+    private val listaFragments = ArrayList<Fragment>()
+    private val listaTitulos = ArrayList<String>()
+
     override fun getCount(): Int {
-        return 2
+        return listaTitulos.size
     }
 
     override fun getItem(position: Int): Fragment {
-        return when (position) {
-            0 -> FragmentOne()
-            else -> {
-                return FragmentTwo()
-            }
-        }
+        return listaFragments[position]
     }
 
-    override fun getPageTitle(position: Int): CharSequence? {
-        return when (position) {
-            0 -> "COMICS"
-            else -> {
-                return "HEROES"
-            }
-        }
+    override fun getPageTitle(position: Int): CharSequence {
+        return listaTitulos[position]
+    }
+
+    fun addFragment(fragment: Fragment, titulo: String) {
+        listaFragments.add(fragment)
+        listaTitulos.add(titulo)
     }
 }
