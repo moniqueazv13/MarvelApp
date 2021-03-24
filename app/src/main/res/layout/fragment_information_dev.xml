@@ -96,7 +96,7 @@ in training. Please, help us! "
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:text="Share the app with friends"
-            android:textColor="@color/red"
+            android:textColor="#FF0000"
             android:textSize="13dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -191,7 +191,7 @@ in training. Please, help us! "
             android:id="@+id/GO"
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:background="@drawable/card2"
+            android:background="@color/purple_700"
             android:text="MARVEL API"
             android:textColor="@color/white"
             android:textSize="16dp"
@@ -199,8 +199,8 @@ in training. Please, help us! "
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/informatin" />
-
+            app:layout_constraintTop_toBottomOf="@+id/informatin"
+            app:layout_constraintVertical_bias="0.489" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
