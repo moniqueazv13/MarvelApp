@@ -6,4 +6,5 @@
     <string name="quiz">Quiz</string>
     <string name="profile">Profile</string>
     <string name="about">About</string>
+    <string name="info_develop">The Marvel Journey App uses Marvel API for getting Marvel data. If you are a developer in training, for getting the same data to your own app click in the button below and find out more about Marvel API</string>
 </resources>

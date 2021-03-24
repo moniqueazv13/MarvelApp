@@ -15,4 +15,5 @@
     <color name="cinza_claro">#625F5F</color>
     <color name="cinza_medio">#3F3D3D</color>
     <color name="cinza_escuro">#171717</color>
+    <color name="red">#D10E25</color>
 </resources>
