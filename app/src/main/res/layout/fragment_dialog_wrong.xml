@@ -62,7 +62,7 @@
             />
 
         <Button
-            android:id="@+id/quit_wrong"
+            android:id="@+id/bt_quit_wrong"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
             app:layout_constraintBottom_toBottomOf="parent"/>
 
         <Button
-            android:id="@+id/continue_wrong"
+            android:id="@+id/bt_continue_wrong"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
