@@ -13,7 +13,6 @@
     <string name="continue_r">CONTINUE</string>
     <string name="title_wrong">OH NO! YOU LOSE :(</string>
     <string name="bt_start_game">Start Game</string>
-    <string name="bt_start_game">START GAME</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="title_notifications">Notifications</string>
