@@ -1,5 +1,18 @@
 <resources>
     <string name="app_name">MarvelApp</string>
+    <string name="title_quiz">GUESS THE SUPERHERO</string>
+    <string name="btn_hint">Use a Hint</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="dialog_hint_title">CHECK YOUR HINT</string>
+    <string name="text_hint">After an alien device mutated her DNA, Danvers transformed from a merely brilliant pilot into one of the most powerful Super Heroes in the universe. Now soaring among the stars, Carol Danvers is known as Captain Marvel.</string>
+    <string name="dialog_title_right">OH YEAH! YOU WIN :)</string>
+    <string name="point_plus">+1 MARVEL POINT</string>
+    <string name="point_minus">-1 MARVEL POINT</string>
+    <string name="hint_back">BACK TO GAME</string>
+    <string name="quit_game">QUIT GAME</string>
+    <string name="continue_r">CONTINUE</string>
+    <string name="title_wrong">OH NO! YOU LOSE :(</string>
+    <string name="bt_start_game">Start Game</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="title_notifications">Notifications</string>
