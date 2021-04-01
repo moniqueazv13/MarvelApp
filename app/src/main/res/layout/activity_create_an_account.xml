@@ -4,103 +4,105 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/marvelback"
-    tools:context=".LoginActivity">
+    android:background="@drawable/marvel_logo"
+    tools:context=".login.CreateAnAccountActivity">
 
     <ImageView
         android:id="@+id/iv_marvel4"
-        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/marvelname"
+        android:layout_marginTop="20dp"
+        android:paddingStart="10dp"
+        android:src="@drawable/marvel_logo_dois"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:paddingLeft="10dp"/>
+        tools:ignore="RtlSymmetry" />
 
     <TextView
         android:id="@+id/tv_title2"
-        android:layout_marginTop="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter your name and email adress"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/text_create_account"
         android:textColor="@color/white"
-        android:textSize="23dp"
+        android:textSize="23sp"
         android:textStyle="bold"
-        android:layout_marginLeft="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_marvel4"/>
+        app:layout_constraintTop_toBottomOf="@+id/iv_marvel4" />
 
     <TextView
         android:id="@+id/tv_message2"
-        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="We’ll use this to sign you in or to create an account if you don’t have one yet."
-        android:textColor="@color/white"
-        android:textSize="18dp"
         android:layout_marginHorizontal="20dp"
-        app:layout_constraintTop_toBottomOf="@id/tv_title2"
+        android:layout_marginTop="5dp"
+        android:text="@string/text_create_account_2"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title2" />
 
     <EditText
         android:id="@+id/et_name2"
-        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/rounded_corners"
-        android:hint="Name"
+        android:hint="@string/edText_name"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="15dp"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_message2"
-        android:textColorHint="@color/black"
-        android:padding="15dp"
-        android:layout_marginHorizontal="20dp"
-        android:maxLines="1"
-        android:inputType="text"/>
+        app:layout_constraintTop_toBottomOf="@+id/tv_message2" />
 
     <EditText
         android:id="@+id/et_last_name2"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/rounded_corners"
-        android:hint="Last Name"
+        android:hint="@string/edText_last_name"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="15dp"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_name2"
-        android:textColorHint="@color/black"
-        android:padding="15dp"
-        android:layout_marginHorizontal="20dp"
-        android:maxLines="1"
-        android:inputType="text"/>
+        app:layout_constraintTop_toBottomOf="@id/et_name2" />
 
     <EditText
         android:id="@+id/et_email_adress2"
-        android:layout_marginTop="70dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/rounded_corners"
-        android:hint="Email Adress"
+        android:hint="@string/edText_email"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="15dp"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/et_last_name2"
-        android:textColorHint="@color/black"
-        android:padding="15dp"
-        android:layout_marginHorizontal="20dp"
-        android:maxLines="1"
-        android:inputType="text"/>
+        tools:ignore="TextFields" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_sign_in1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        app:cornerRadius="10dp"
-        android:padding="20dp"
         android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="25dp"
         android:backgroundTint="#EDC5211C"
-        android:text="CONTINUE"
+        android:padding="20dp"
+        android:text="@string/text_continue"
+        app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_email_adress2" />
 

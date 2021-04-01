@@ -17,13 +17,15 @@
         android:layout_height="match_parent"
         android:layout_margin="0dp"
         android:layout_marginStart="10dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/iv_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher_background" />
+            android:src="@drawable/ic_launcher_background"
+            android:contentDescription="@string/hero_comic" />
 
         <TextView
             android:id="@+id/tv_name"
@@ -35,7 +37,9 @@
             android:fontFamily="@font/abel_regular"
             android:textAlignment="textStart"
             android:textColor="#FFFFFF"
-            android:textSize="18dp"
+            android:textSize="18sp"
             tools:text="Homem-Aranha" />
+
     </LinearLayout>
+
 </com.google.android.material.card.MaterialCardView>

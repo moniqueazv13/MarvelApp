@@ -45,13 +45,13 @@
             android:layout_marginTop="15dp"
             android:paddingStart="15dp"
             android:paddingEnd="15dp"
-            android:text="@string/text_hint"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="18sp"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/v_line_red" />
+            card_view:layout_constraintTop_toBottomOf="@+id/v_line_red"
+            android:text="@string/text_hint" />
 
         <Button
             android:id="@+id/bt_hint_back"
@@ -66,5 +66,7 @@
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toBottomOf="@+id/tv_hint" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </com.google.android.material.card.MaterialCardView>

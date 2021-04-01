@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="0dp"
     android:layout_marginLeft="0dp"
+    android:layout_marginTop="0dp"
     android:layout_marginRight="0dp"
     android:layout_marginBottom="0dp"
-    android:background="@drawable/background_quiz">
+    android:background="@drawable/marvel_logo">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_minus"
@@ -18,9 +17,9 @@
         android:layout_marginStart="215dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="5dp"
+        android:background="#EFEFEF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="#EFEFEF">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -30,9 +29,10 @@
                 android:id="@+id/img_minus"
                 android:layout_width="48dp"
                 android:layout_height="36.96dp"
-                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:layout_constraintLeft_toLeftOf="parent"
+                tools:srcCompat="@tools:sample/avatars"
+                android:contentDescription="@string/point_minus" />
 
             <TextView
                 android:id="@+id/tv_minus"
@@ -48,6 +48,7 @@
                 tools:text="10" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -57,9 +58,9 @@
         android:layout_marginStart="315dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="5dp"
+        android:background="#EFEFEF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="#EFEFEF">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -69,8 +70,8 @@
                 android:id="@+id/img_plus"
                 android:layout_width="48dp"
                 android:layout_height="36.96dp"
-                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
@@ -79,13 +80,14 @@
                 android:layout_height="19dp"
                 android:layout_marginStart="56dp"
                 android:layout_marginTop="9dp"
-                android:textSize="15sp"
                 android:gravity="center"
                 android:textColor="#000000"
+                android:textSize="15sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="10" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.cardview.widget.CardView>
 
     <TextView
@@ -94,21 +96,22 @@
         android:layout_height="42dp"
         android:layout_marginTop="95dp"
         android:layout_marginBottom="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/img_hero_quiz"
         android:gravity="center_horizontal|center_vertical"
+        android:letterSpacing="0.01"
         android:text="@string/title_quiz"
-        android:textStyle="bold"
-        android:textSize="24sp"
         android:textColor="#FFF7F7"
-        android:letterSpacing="0.01"/>
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/img_hero_quiz"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/logo_marvel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:src="@drawable/background_icon_quiz"
+        android:contentDescription="@string/logo_marvel"
+        android:src="@drawable/marvel_logo_dois"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -116,42 +119,43 @@
         android:id="@+id/img_hero_quiz"
         android:layout_width="match_parent"
         android:layout_height="304.62dp"
-        android:layout_marginTop="140dp"
-        android:layout_marginBottom="208dp"
         android:layout_marginLeft="55dp"
+        android:layout_marginTop="140dp"
         android:layout_marginRight="55dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="208dp"
+        android:background="@drawable/my_img_rect"
+        android:contentDescription="@string/hero_image"
         android:gravity="center"
         android:src="@drawable/background_hero_quiz"
-        android:background="@drawable/my_img_rect"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_answer"
         android:layout_width="match_parent"
         android:layout_height="47dp"
-        android:layout_marginTop="335dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="335dp"
         android:layout_marginRight="10dp"
-        tools:text="CAPTAIN MARVEL"
+        android:background="@drawable/my_et_rect"
         android:gravity="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/my_et_rect"/>
+        tools:text="CAPTAIN MARVEL" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_hint"
         android:layout_width="159dp"
         android:layout_height="45dp"
-        android:layout_marginTop="40dp"
         android:layout_marginStart="10dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_answer"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/my_bt_hint"
         android:text="@string/btn_hint"
         android:textAllCaps="false"
         android:textStyle="bold"
-        android:background="@drawable/my_bt_hint"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_answer" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_confirm"
@@ -159,17 +163,11 @@
         android:layout_height="45dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="10dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_answer"
+        android:background="@drawable/my_bt_confirm"
         android:text="@string/btn_confirm"
         android:textAllCaps="false"
         android:textStyle="bold"
-        android:background="@drawable/my_bt_confirm"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_answer" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bn_menu"
-        android:layout_width="match_parent"
-        android:layout_height="49dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:background="#171717"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

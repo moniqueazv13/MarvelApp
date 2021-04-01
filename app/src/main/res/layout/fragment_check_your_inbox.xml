@@ -5,10 +5,11 @@
     android:layout_width="257dp"
     android:layout_height="337dp"
     android:layout_gravity="center"
+    card_view:cardBackgroundColor="#EFEFEF"
     card_view:cardCornerRadius="15dp"
     card_view:strokeColor="@color/white"
-    card_view:strokeWidth="1dp"
-    card_view:cardBackgroundColor="#EFEFEF">
+    card_view:strokeWidth="1dp">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,7 +20,7 @@
             android:layout_height="70dp"
             android:background="#000000"
             android:gravity="center"
-            android:text="CHECK YOUR INBOX"
+            android:text="@string/check_your_inbox"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -40,16 +41,16 @@
             android:id="@+id/tv_hint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="85dp"
+            android:gravity="center_horizontal|top"
             android:paddingStart="15dp"
             android:paddingEnd="15dp"
-            android:gravity="center_horizontal|top"
             android:textColor="#000000"
             android:textSize="18sp"
-            android:text="We just emailed instructions and a reset link to jean_example@gmail.com. It might take a few minutes to arrive."/>
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            tools:text="We just emailed instructions and a reset link to jean_example@gmail.com. It might take a few minutes to arrive." />
 
         <Button
             android:id="@+id/button_hint_back_to_sign_in"
@@ -58,12 +59,14 @@
             android:layout_marginBottom="10dp"
             android:background="@android:color/transparent"
             android:gravity="center"
-            android:text="BACK TO SIGN IN"
+            android:text="@string/back_to_sign_in"
             android:textColor="#D10E25"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textStyle="bold"
-            card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintBottom_toBottomOf="parent"
-            card_view:layout_constraintEnd_toEndOf="parent"/>
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </com.google.android.material.card.MaterialCardView>
