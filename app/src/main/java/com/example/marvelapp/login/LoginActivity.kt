@@ -1,9 +1,11 @@
-package com.example.marvelappjean
+package com.example.marvelapp.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.marvelapp.R
+import com.example.marvelapp.view.MainActivity
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
@@ -72,7 +74,7 @@ class LoginActivity : AppCompatActivity() {
             else -> {
                 nameInputLayout?.error = null
                 passInputLayout?.error = null
-                val intent = Intent(this, MainExample::class.java)
+                val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
             }
         }

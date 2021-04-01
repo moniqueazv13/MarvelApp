@@ -1,9 +1,9 @@
-package com.example.marvelappjean
+package com.example.marvelapp.login
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.example.marvelapp.R
+import com.example.marvelapp.login.dialog.CheckYourInbox
 import com.google.android.material.button.MaterialButton
 
 class ForgotYourPassword: AppCompatActivity() {
@@ -20,7 +20,8 @@ class ForgotYourPassword: AppCompatActivity() {
 
     private fun sendEmail() {
         buttonForgotYourPassword.setOnClickListener {
-               CheckYourInbox().show(supportFragmentManager, "CheckYourInbox")
+               CheckYourInbox()
+                   .show(supportFragmentManager, "CheckYourInbox")
             }
         }
     }

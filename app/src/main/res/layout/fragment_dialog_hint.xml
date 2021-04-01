@@ -3,19 +3,20 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="257dp"
-    android:layout_height="337dp"
-    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    card_view:cardBackgroundColor="#EFEFEF"
     card_view:cardCornerRadius="15dp"
     card_view:strokeColor="@color/white"
-    card_view:strokeWidth="1dp"
-    card_view:cardBackgroundColor="#EFEFEF">
+    card_view:strokeWidth="1dp">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center">
+        android:paddingBottom="20dp">
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/tv_check_hint"
+            android:layout_width="0dp"
             android:layout_height="70dp"
             android:background="#000000"
             android:gravity="center"
@@ -24,11 +25,11 @@
             android:textSize="24sp"
             android:textStyle="bold"
             card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintHorizontal_bias="0.0"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent" />
 
         <View
+            android:id="@+id/v_line_red"
             android:layout_width="match_parent"
             android:layout_height="5dp"
             android:layout_marginTop="65dp"
@@ -41,31 +42,29 @@
             android:id="@+id/tv_hint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="85dp"
+            android:layout_marginTop="15dp"
             android:paddingStart="15dp"
             android:paddingEnd="15dp"
-            android:gravity="center_horizontal|top"
+            android:text="@string/text_hint"
+            android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="18sp"
-            android:text="@string/text_hint"/>
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/v_line_red" />
 
         <Button
             android:id="@+id/bt_hint_back"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
+            android:layout_marginTop="12dp"
             android:text="@string/hint_back"
             android:textColor="#D10E25"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:fontFamily="Roboto Condensed"
+            card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintBottom_toBottomOf="parent"
-            card_view:layout_constraintEnd_toEndOf="parent"/>
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_hint" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

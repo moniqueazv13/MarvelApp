@@ -1,8 +1,9 @@
-package com.example.marvelappjean
+package com.example.marvelapp.login
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.marvelapp.R
 import com.google.android.material.button.MaterialButton
 
 class CreateAnAccountActivity: AppCompatActivity() {
