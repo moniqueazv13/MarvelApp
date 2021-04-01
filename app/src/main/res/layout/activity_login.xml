@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/marvelback">
+    android:background="@drawable/marvel_logo">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,7 +16,8 @@
             android:layout_width="370dp"
             android:layout_height="120dp"
             android:layout_marginTop="30dp"
-            android:src="@drawable/user"
+            android:contentDescription="@string/user_icon"
+            android:src="@drawable/user_icon"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -42,7 +43,7 @@
                 android:id="@+id/tiet_email1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="E-mail"
+                android:hint="@string/edText_email"
                 android:inputType="textWebEmailAddress"
                 android:maxLines="1" />
 
@@ -70,7 +71,7 @@
                 android:id="@+id/tiet_password1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Password"
+                android:hint="@string/password"
                 android:inputType="number"
                 android:maxLines="1" />
 
@@ -84,7 +85,7 @@
             android:layout_marginTop="25dp"
             android:backgroundTint="#EDC5211C"
             android:padding="20dp"
-            android:text="SIGN IN"
+            android:text="@string/btn_sign_in"
             app:cornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/til_password1" />
@@ -94,23 +95,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
             android:background="@android:color/transparent"
             android:gravity="right"
             android:padding="0dp"
-            android:text="Forgot your password?"
+            android:text="@string/forgot_your_password"
             android:textAllCaps="false"
             android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button_sign_in1" />
+            app:layout_constraintTop_toBottomOf="@id/button_sign_in1"
+            tools:ignore="RtlHardcoded" />
 
         <TextView
             android:id="@+id/tv_remember_me1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
             android:layout_marginTop="30dp"
-            android:text="Remember-me"
+            android:text="@string/remember_me"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/button_sign_in1" />
@@ -121,20 +123,21 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="70dp"
             android:background="@android:color/transparent"
-            android:gravity="right"
+            android:gravity="center_vertical"
             android:padding="0dp"
-            android:text="Create an account"
+            android:text="@string/create_an_account"
             android:textAllCaps="false"
             android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button_sign_in1" />
+            app:layout_constraintTop_toBottomOf="@id/button_sign_in1"
+            tools:ignore="RtlHardcoded" />
 
         <View
             android:id="@+id/view_left1"
             android:layout_width="100dp"
             android:layout_height="1dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="30dp"
             android:background="#C4C4C4"
             app:layout_constraintStart_toStartOf="parent"
@@ -145,7 +148,7 @@
             android:layout_width="100dp"
             android:layout_height="1dp"
             android:layout_marginTop="30dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
             android:background="#C4C4C4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/button_create_an_account1" />
@@ -155,7 +158,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="OR CONNECT USING"
+            android:text="@string/or_connect_using"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -169,7 +172,7 @@
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/white"
             android:padding="15dp"
-            android:text="Google"
+            android:text="@string/google"
             android:textAllCaps="false"
             android:textColor="@color/black"
             app:cornerRadius="10dp"
@@ -184,7 +187,7 @@
             android:layout_marginTop="20dp"
             android:backgroundTint="#C23B5998"
             android:padding="15dp"
-            android:text="Facebook"
+            android:text="@string/facebook"
             android:textAllCaps="false"
             android:textColor="@color/white"
             app:cornerRadius="10dp"

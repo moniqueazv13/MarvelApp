@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/marvel_logo">
 
-
     <TextView
         android:id="@+id/txt_hero_name_details"
         android:layout_width="wrap_content"
@@ -29,7 +28,8 @@
         android:layout_marginTop="10dp"
         android:src="@drawable/marvel_logo_dois"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/logo_marvel" />
 
     <ImageView
         android:id="@+id/iv_hero_image_details"
@@ -38,12 +38,13 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="40dp"
         android:scaleType="fitXY"
-        android:src="@drawable/hero_image"
+        android:src="@drawable/ic_launcher_background"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_marvel" />
+        app:layout_constraintTop_toBottomOf="@+id/logo_marvel"
+        android:contentDescription="@string/hero_image" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/layout_info_comics2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
