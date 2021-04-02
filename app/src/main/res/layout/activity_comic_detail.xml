@@ -29,15 +29,23 @@
             tools:text="Amazing Spider-Man
             (1963-1998) #101: Facsmile Edition" />
 
-        <android.widget.Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_buy"
             android:layout_width="193dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
+            android:layout_marginHorizontal="20dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/background_red"
-            android:textColor="#FFFFFF"
-            tools:text="Buy Here" />
+            android:backgroundTint="@color/vermelho"
+            android:padding="15dp"
+            android:text="@string/buy_here"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_message1"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp" />
+
     </LinearLayout>
 
     <ImageView

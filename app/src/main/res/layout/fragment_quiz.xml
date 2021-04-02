@@ -20,12 +20,15 @@
         android:id="@+id/tv_greeting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
         android:layout_marginTop="90dp"
+        android:fontFamily="@font/robotocondensed_regular"
         android:text="@string/welcome_to_the_marvel_quiz"
         android:textAlignment="center"
         android:textColor="#EDEDED"
         android:textSize="30sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,27 +36,29 @@
         android:id="@+id/img_heroIcon"
         android:layout_width="300dp"
         android:layout_height="250dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="60dp"
         android:layout_marginBottom="80dp"
         android:src="@drawable/captain"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_greeting" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_start"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="320dp"
-        android:background="@drawable/my_bt_confirm"
-        android:text="@string/bt_start_game"
+        android:backgroundTint="#79C942"
+        android:padding="10dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/start_game"
         android:textAllCaps="false"
+        android:textColor="@color/black"
         android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:cornerRadius="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_greeting" />
+        app:layout_constraintTop_toBottomOf="@+id/img_heroIcon"
+        app:strokeColor="@color/white"
+        app:strokeWidth="1dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

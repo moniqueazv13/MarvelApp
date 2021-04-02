@@ -31,7 +31,8 @@
             android:layout_marginTop="40dp"
             android:text="@string/about_the_app"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:fontFamily="@font/robotocondensed_regular"
+            android:textSize="23sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iv_marvel_about" />
@@ -65,17 +66,19 @@
                 android:textColor="@color/black"
                 android:textSize="17sp"
                 android:textStyle="bold"
+                android:fontFamily="@font/robotocondensed_regular"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/iv_captain_america"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/version"
-                android:layout_width="170dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:text="@string/version_feb_24th_2021"
                 android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/iv_captain_america"
@@ -86,6 +89,7 @@
                 android:layout_width="240dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:fontFamily="@font/roboto_regular"
                 android:gravity="center"
                 android:text="@string/this_is_an_app_developed_by_students_in_training_please_help_us"
                 android:textColor="@color/black"
@@ -124,6 +128,7 @@
                 android:text="@string/share_the_app_with_friends"
                 android:textColor="#FF0000"
                 android:textSize="13sp"
+                android:fontFamily="@font/robotocondensed_regular"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -149,6 +154,7 @@
                 android:layout_marginVertical="20dp"
                 android:layout_marginEnd="30dp"
                 android:background="@drawable/card"
+                android:fontFamily="@font/robotocondensed_regular"
                 android:text="@string/rate_us_on_play_store"
                 android:textColor="#FF0000"
                 android:textSize="13sp"
@@ -176,6 +182,7 @@
                 android:layout_marginTop="10dp"
                 android:text="@string/information_for_developers"
                 android:textColor="@color/black"
+                android:fontFamily="@font/robotocondensed_regular"
                 android:textSize="17sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -191,25 +198,32 @@
                 android:gravity="center"
                 android:text="@string/info_develop"
                 android:textColor="@color/black"
+                android:fontFamily="@font/robotocondensed_regular"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_information_title"
                 tools:ignore="MissingConstraints" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/bt_confirm"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_marvel_api"
                 android:layout_width="159dp"
-                android:layout_height="45dp"
+                android:layout_height="wrap_content"
                 android:layout_marginVertical="15dp"
-                android:background="@drawable/my_bt_marvel_api"
+                android:backgroundTint="#D10E25"
+                android:padding="15dp"
                 android:text="@string/marvel_api"
                 android:textColor="@color/white"
-                android:textStyle="bold"
+                app:cornerRadius="5dp"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_information_description" />
+                app:layout_constraintTop_toBottomOf="@id/tv_information_description"
+
+                />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

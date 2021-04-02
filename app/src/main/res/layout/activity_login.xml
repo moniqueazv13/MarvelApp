@@ -17,7 +17,7 @@
             android:layout_height="120dp"
             android:layout_marginTop="30dp"
             android:contentDescription="@string/user_icon"
-            android:src="@drawable/user_icon"
+            android:src="@drawable/user"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -43,6 +43,7 @@
                 android:id="@+id/tiet_email1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
                 android:hint="@string/edText_email"
                 android:inputType="textWebEmailAddress"
                 android:maxLines="1" />
@@ -72,6 +73,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/password"
+                android:fontFamily="@font/roboto_regular"
                 android:inputType="number"
                 android:maxLines="1" />
 
@@ -86,6 +88,7 @@
             android:backgroundTint="#EDC5211C"
             android:padding="20dp"
             android:text="@string/btn_sign_in"
+            android:fontFamily="@font/roboto_regular"
             app:cornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/til_password1" />
@@ -100,6 +103,7 @@
             android:gravity="right"
             android:padding="0dp"
             android:text="@string/forgot_your_password"
+            android:fontFamily="@font/roboto_regular"
             android:textAllCaps="false"
             android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
@@ -113,6 +117,7 @@
             android:layout_marginStart="50dp"
             android:layout_marginTop="30dp"
             android:text="@string/remember_me"
+            android:fontFamily="@font/roboto_regular"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/button_sign_in1" />
@@ -126,6 +131,7 @@
             android:gravity="center_vertical"
             android:padding="0dp"
             android:text="@string/create_an_account"
+            android:fontFamily="@font/roboto_regular"
             android:textAllCaps="false"
             android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
@@ -159,6 +165,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/or_connect_using"
+            android:fontFamily="@font/roboto_regular"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

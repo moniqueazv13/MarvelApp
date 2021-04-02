@@ -3,7 +3,7 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="257dp"
-    android:layout_height="337dp"
+    android:layout_height="wrap_content"
     android:layout_gravity="center"
     card_view:cardBackgroundColor="#EFEFEF"
     card_view:cardCornerRadius="15dp"
@@ -16,11 +16,13 @@
         android:layout_gravity="center">
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/tv_you_win"
+            android:layout_width="0dp"
             android:layout_height="70dp"
             android:background="#000000"
             android:gravity="center"
             android:text="@string/dialog_title_right"
+            android:fontFamily="@font/robotocondensed_regular"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -29,35 +31,38 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <View
+            android:id="@+id/view_red_line"
             android:layout_width="match_parent"
             android:layout_height="5dp"
-            android:layout_marginTop="65dp"
             android:background="#D10E25"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/tv_you_win" />
 
         <ImageView
+            android:id="@+id/iv_thumb_right"
             android:layout_width="187dp"
             android:layout_height="131dp"
-            android:layout_marginTop="95dp"
+            android:layout_marginTop="30dp"
             android:gravity="center_horizontal|top"
             android:src="@drawable/icon_plus"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_red_line"
             android:contentDescription="@string/point_plus" />
 
         <TextView
-            android:layout_width="224dp"
-            android:layout_height="24dp"
-            android:layout_marginTop="235dp"
+            android:id="@+id/tv_marvel_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal|top"
             android:textColor="#000000"
             android:textSize="18sp"
+            android:fontFamily="@font/roboto_regular"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_thumb_right"
             android:text="@string/point_plus" />
 
         <Button
@@ -66,13 +71,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:layout_marginBottom="15dp"
-            android:fontFamily="Roboto Condensed"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/robotocondensed_regular"
             android:gravity="center"
             android:text="@string/quit_game"
             android:textColor="#D10E25"
             android:textSize="18sp"
             android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tv_marvel_point"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -82,13 +89,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
-            android:layout_marginBottom="15dp"
-            android:fontFamily="Roboto Condensed"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/robotocondensed_regular"
             android:gravity="center"
             android:text="@string/continue_r"
             android:textColor="#D10E25"
             android:textSize="18sp"
             android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tv_marvel_point"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 

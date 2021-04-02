@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import androidx.fragment.app.Fragment
-import com.example.marvelapp.QuizActivity
+import com.example.marvelapp.view.QuizActivity
 import com.example.marvelapp.R
 
 class QuizFragment : Fragment(R.layout.fragment_quiz){

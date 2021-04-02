@@ -11,8 +11,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingBottom="20dp">
+        android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/tv_check_hint"
@@ -21,6 +20,7 @@
             android:background="#000000"
             android:gravity="center"
             android:text="@string/dialog_hint_title"
+            android:fontFamily="@font/robotocondensed_regular"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -32,11 +32,10 @@
             android:id="@+id/v_line_red"
             android:layout_width="match_parent"
             android:layout_height="5dp"
-            android:layout_marginTop="65dp"
             android:background="#D10E25"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toTopOf="parent" />
+            card_view:layout_constraintTop_toBottomOf="@id/tv_check_hint" />
 
         <TextView
             android:id="@+id/tv_hint"
@@ -46,6 +45,7 @@
             android:paddingStart="15dp"
             android:paddingEnd="15dp"
             android:textAlignment="center"
+            android:fontFamily="@font/roboto_regular"
             android:textColor="#000000"
             android:textSize="18sp"
             card_view:layout_constraintEnd_toEndOf="parent"
@@ -58,13 +58,15 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginVertical="15dp"
             android:text="@string/hint_back"
+            android:fontFamily="@font/robotocondensed_regular"
             android:textColor="#D10E25"
             android:textSize="24sp"
             android:textStyle="bold"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintTop_toBottomOf="@+id/tv_hint" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,13 +21,14 @@
 
     <TextView
         android:id="@+id/tv_title3"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginHorizontal="20dp"
         android:layout_marginTop="15dp"
         android:text="@string/it_seems_that_you_already_have_an_account"
         android:textColor="@color/white"
         android:textSize="23sp"
+        android:fontFamily="@font/roboto_regular"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo_marvel" />
@@ -41,6 +42,7 @@
         android:text="@string/enter_your_marvel_password_and_sign_in"
         android:textColor="@color/white"
         android:textSize="18sp"
+        android:fontFamily="@font/roboto_regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_title3" />
@@ -54,6 +56,7 @@
         android:background="@drawable/rounded_corners"
         android:hint="@string/password"
         android:inputType="textPassword"
+        android:fontFamily="@font/roboto_regular"
         android:maxLines="1"
         android:padding="15dp"
         android:textColorHint="@color/black"
@@ -73,6 +76,7 @@
         android:text="@string/forgot_your_password"
         android:textAllCaps="false"
         android:textStyle="italic"
+        android:fontFamily="@font/roboto_regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/et_password3" />
 
@@ -84,6 +88,7 @@
         android:layout_marginTop="5dp"
         android:backgroundTint="#EDC5211C"
         android:padding="20dp"
+        android:fontFamily="@font/roboto_regular"
         android:text="@string/sign_in"
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"

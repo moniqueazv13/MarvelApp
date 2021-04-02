@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MarvelApp">
         <activity android:name=".view.MainActivity"/>
-        <activity android:name=".QuizActivity"/>
+        <activity android:name=".view.QuizActivity"/>
         <activity android:name=".login.AccountAlreadyRegistered"/>
         <activity android:name=".login.CreateAnAccountActivity"/>
         <activity android:name=".login.CreateAPassword"/>
