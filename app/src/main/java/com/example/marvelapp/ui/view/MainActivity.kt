@@ -1,4 +1,4 @@
-package com.example.marvelapp.view
+package com.example.marvelapp.ui.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -20,5 +20,7 @@ class MainActivity : AppCompatActivity() {
                 supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHost.navController
         nav_view.setupWithNavController(navController)
+
+
     }
 }

@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.marvelapp.R
-import com.example.marvelapp.view.MainActivity
+import com.example.marvelapp.ui.view.MainActivity
 import com.google.android.material.button.MaterialButton
 
 class AccountAlreadyRegistered:AppCompatActivity() {

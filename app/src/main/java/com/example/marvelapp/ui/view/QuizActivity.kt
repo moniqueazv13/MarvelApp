@@ -1,4 +1,4 @@
-package com.example.marvelapp.view
+package com.example.marvelapp.ui.view
 
 import android.os.Bundle
 import android.widget.Button
