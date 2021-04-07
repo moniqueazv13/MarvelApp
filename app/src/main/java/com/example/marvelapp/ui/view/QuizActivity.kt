@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.marvelapp.FragmentConfirmRight
-import com.example.marvelapp.FragmentHint
+import com.example.marvelapp.fragments.FragmentConfirmRight
+import com.example.marvelapp.fragments.FragmentHint
 import com.example.marvelapp.R
 
 class QuizActivity : AppCompatActivity() {

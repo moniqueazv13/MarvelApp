@@ -1,4 +1,4 @@
-package com.example.marvelapp.ui.notifications
+package com.example.marvelapp.ui.profile
 
 import androidx.fragment.app.Fragment
 import com.example.marvelapp.R

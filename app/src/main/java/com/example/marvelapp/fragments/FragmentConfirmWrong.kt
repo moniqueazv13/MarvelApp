@@ -1,28 +1,28 @@
-package com.example.marvelapp
+package com.example.marvelapp.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.DialogFragment
+import com.example.marvelapp.R
 
-class FragmentConfirmRight: DialogFragment() {
+class FragmentConfirmWrong:DialogFragment() {
 
-    private val btContinue by lazy { view?.findViewById<Button>(R.id.bt_continue_right)}
+    private val btContinueW by lazy { view?.findViewById<Button>(R.id.bt_continue_wrong)}
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         getDialog()!!.getWindow()?.setBackgroundDrawableResource(R.drawable.background_dialog_fragment)
-        return inflater.inflate(R.layout.fragment_dialog_confirm_right, container, false)
+        return inflater.inflate(R.layout.fragment_dialog_wrong, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btContinue?.setOnClickListener {
+        btContinueW?.setOnClickListener {
             dismiss()
-           // val intentGame = Intent(context, QuizActivity::class.java)
+            // val intentGame = Intent(context, QuizActivity::class.java)
             //context!!.startActivity(intentGame)
         }
     }
