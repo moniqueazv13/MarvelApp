@@ -10,7 +10,14 @@ import com.example.marvelapp.heroes.adapter.viewholder.HeroesViewHolder
 import com.example.marvelapp.model.Result
 import com.squareup.picasso.Picasso
 
-class HeroesAdapter(val heroesList: List<Result>) : RecyclerView.Adapter<HeroesViewHolder>() {
+class HeroesAdapter() : RecyclerView.Adapter<HeroesViewHolder>() {
+
+    var heroesList = listOf<Result>()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HeroesViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(
             R.layout.hero_item,
@@ -22,7 +29,7 @@ class HeroesAdapter(val heroesList: List<Result>) : RecyclerView.Adapter<HeroesV
     }
 
     override fun onBindViewHolder(holder: HeroesViewHolder, position: Int) {
-        val heroes = heroesList.elementAt(position)
+        val heroes = heroesList[position]
 
         holder.heroName.text = heroes.name
 

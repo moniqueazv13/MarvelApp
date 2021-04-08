@@ -4,13 +4,13 @@ import com.google.gson.annotations.SerializedName
 
 data class Result(
     @SerializedName("comics")
-    val comics: Comics ? = null,
+    val comics: Comics? = null,
     @SerializedName("description")
     val description: String? = null,
     @SerializedName("events")
-    val events: Events ? = null,
+    val events: Events? = null,
     @SerializedName("id")
-    val id: Int ? = null,
+    val id: Int? = null,
     @SerializedName("modified")
     val modified: String? = null,
     @SerializedName("name")

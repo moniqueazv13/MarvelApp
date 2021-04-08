@@ -1,5 +1,6 @@
 package com.example.marvelapp.viewmodel
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.marvelapp.model.Result
@@ -12,21 +13,19 @@ import java.net.UnknownHostException
 
 class ViewModelCharacters : ViewModel() {
 
-    val listMutableChar = MutableLiveData<List<Result>>()
+    private val _listMutableChar = MutableLiveData<List<Result>>()
+    val listMutableChar: LiveData<List<Result>> = _listMutableChar
     val loading = MutableLiveData<Boolean>()
     val errorMessage = MutableLiveData<String>()
     private val repository = RepositoryApi()
 
-    init {
-        getAllCharacters()
-    }
 
     fun getAllCharacters() = CoroutineScope(Dispatchers.IO).launch {
         loading.postValue(true)
         try {
 
             repository.getCharacterService().let { characterResponse ->
-                listMutableChar.postValue((characterResponse.data.results))
+                _listMutableChar.postValue(characterResponse.data.results)
                 loading.postValue(false)
             }
         } catch (error: Throwable) {

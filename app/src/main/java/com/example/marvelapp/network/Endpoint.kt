@@ -6,12 +6,12 @@ import retrofit2.http.Query
 
 interface Endpoint {
 
-    @GET("character?")
+    @GET("/v1/public/characters")
     suspend fun getResponseCharacter(
         @Query("offset") offset: Int?,
         @Query("orderBy") orderBy: String?,
         @Query("ts") ts: String?,
+        @Query("apikey") apikey: String?,
         @Query("hash") hash: String?,
-        @Query("apikey") apikey: String?
     ): CharacterResponse
 }
