@@ -9,4 +9,5 @@ import com.example.marvelapp.R
 class HeroesViewHolder(view:View) : RecyclerView.ViewHolder(view){
     val heroName by lazy { view.findViewById<TextView>(R.id.tv_hero_name) }
     val heroImage by lazy { view.findViewById<ImageView>(R.id.iv_hero_image) }
+
 }

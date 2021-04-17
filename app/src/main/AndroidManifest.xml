@@ -12,8 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MarvelApp"
         android:usesCleartextTraffic="true">
-        <activity android:name="com.example.marvelapp.ui.view.MainActivity" />
-        <activity android:name="com.example.marvelapp.ui.view.QuizActivity" />
+        <activity android:name=".ui.view.SearchableActivity"></activity>
+        <activity android:name=".ui.view.MainActivity" />
+        <activity android:name=".ui.view.QuizActivity" />
         <activity android:name=".login.AccountAlreadyRegistered" />
         <activity android:name=".login.CreateAnAccountActivity" />
         <activity android:name=".login.CreateAPassword" />
@@ -26,8 +27,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.marvelapp.ui.view.DetailsComicsActivity" />
-        <activity android:name="com.example.marvelapp.ui.view.DetailsHeroesActivity" />
+        <activity android:name=".ui.view.DetailsComicsActivity" />
+        <activity android:name=".ui.view.DetailsHeroesActivity" />
     </application>
 
 </manifest>

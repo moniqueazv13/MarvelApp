@@ -1,6 +1,7 @@
 package com.example.marvelapp.model
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class CharacterResponse(
     @SerializedName("attributionHTML")
@@ -17,4 +18,4 @@ data class CharacterResponse(
     val etag: String,
     @SerializedName("status")
     val status: String
-)
+): Serializable

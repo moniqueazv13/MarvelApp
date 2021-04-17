@@ -1,5 +1,6 @@
-package com.example.marvelapp.viewmodel
+package com.example.marvelapp.ui.viewmodel
 
+import android.text.Editable
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -15,10 +16,20 @@ class ViewModelCharacters : ViewModel() {
 
     private val _listMutableChar = MutableLiveData<List<Result>>()
     val listMutableChar: LiveData<List<Result>> = _listMutableChar
+    private val _emptyField = MutableLiveData<Boolean>()
+    val emptyField: LiveData<Boolean> = _emptyField
+
     val loading = MutableLiveData<Boolean>()
     val errorMessage = MutableLiveData<String>()
     private val repository = RepositoryApi()
 
+    fun searchHeroes(search: Editable?) {
+        if (search != null && search.isNotEmpty()) {
+            getAllCharactersByName(search.toString())
+        }else{
+            _emptyField.postValue(true)
+        }
+    }
 
     fun getAllCharacters() = CoroutineScope(Dispatchers.IO).launch {
         loading.postValue(true)
@@ -41,4 +52,22 @@ class ViewModelCharacters : ViewModel() {
             is UnknownHostException -> errorMessage.postValue("Verifique sua conexão")
         }
     }
+
+
+    private fun getAllCharactersByName(name: String) {
+        CoroutineScope(Dispatchers.IO).launch {
+            loading.postValue(true)
+            try {
+                repository.getCharacterOrderName(name).let { characterResponse ->
+                    _listMutableChar.postValue(characterResponse.data.results)
+                    loading.postValue(false)
+                }
+            } catch (error: Throwable) {
+                loading.postValue(false)
+                handleError(error)
+            }
+        }
+    }
 }
+
+

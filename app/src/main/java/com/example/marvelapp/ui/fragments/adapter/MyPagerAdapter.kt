@@ -1,4 +1,4 @@
-package com.example.marvelapp.fragments.adapter
+package com.example.marvelapp.ui.fragments.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

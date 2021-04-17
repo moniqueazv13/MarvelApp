@@ -1,6 +1,7 @@
 package com.example.marvelapp.model
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Result(
     @SerializedName("comics")
@@ -25,4 +26,4 @@ data class Result(
     val thumbnail: Thumbnail? = null,
     @SerializedName("urls")
     val urls: List<Url>? = null
-)
+): Serializable

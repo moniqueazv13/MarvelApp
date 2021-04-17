@@ -1,4 +1,4 @@
-package com.example.marvelapp.fragments
+package com.example.marvelapp.ui.fragments
 
 import android.os.Bundle
 import android.view.View
@@ -10,7 +10,7 @@ import androidx.lifecycle.observe
 import androidx.recyclerview.widget.RecyclerView
 import com.example.marvelapp.R
 import com.example.marvelapp.heroes.adapter.HeroesAdapter
-import com.example.marvelapp.viewmodel.ViewModelCharacters
+import com.example.marvelapp.ui.viewmodel.ViewModelCharacters
 
 
 class FragmentTwo : Fragment(R.layout.fragment_two) {
