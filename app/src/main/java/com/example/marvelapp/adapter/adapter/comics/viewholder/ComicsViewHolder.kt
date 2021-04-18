@@ -1,4 +1,4 @@
-package com.example.marvelapp.comics.adapter.viewholder
+package com.example.marvelapp.adapter.adapter.comics.viewholder
 
 import android.view.View
 import android.widget.ImageView

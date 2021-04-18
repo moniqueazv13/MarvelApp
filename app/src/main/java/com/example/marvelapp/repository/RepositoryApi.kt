@@ -1,7 +1,8 @@
 package com.example.marvelapp.repository
 
 import com.example.marvelapp.MD5.Companion.md5
-import com.example.marvelapp.model.CharacterResponse
+import com.example.marvelapp.model.characters.CharacterResponse
+import com.example.marvelapp.model.comics.ComicsResponse
 import com.example.marvelapp.network.Endpoint
 import com.example.marvelapp.network.RetrofitInit
 
@@ -13,7 +14,7 @@ class RepositoryApi {
     val orderBy: String = "name"
     private val url = "https://gateway.marvel.com"
     val ts = java.lang.Long.toString(System.currentTimeMillis() / 1000)
-   val hash = md5(ts + PRIVATE_KEY + PUBLIC_KEY)
+    val hash = md5(ts + PRIVATE_KEY + PUBLIC_KEY)
 
     private var service = Endpoint::class
 
@@ -27,4 +28,15 @@ class RepositoryApi {
         serviceChar.getResponseCharacterOrderName(
             name, ts, hash, PUBLIC_KEY
         )
+
+    // copiei e colei a getCharacterService, alterando nome e método do Endpoint
+    suspend fun getComicsService(): ComicsResponse = serviceChar.getResponseComics(
+        page, ts, PUBLIC_KEY, hash
+    )
+
+    //     copiei e colei a getCharacterService, alterando nome e método do Endpoint
+//    suspend fun getComicsOrderName(name: String): ComicsResponse =
+//        serviceChar.getResponseComicsOrderName(
+//            name, ts, hash, PUBLIC_KEY
+//        )
 }

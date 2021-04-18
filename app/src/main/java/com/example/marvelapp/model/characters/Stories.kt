@@ -1,9 +1,10 @@
-package com.example.marvelapp.model
+package com.example.marvelapp.model.characters
 
+import com.example.marvelapp.model.characters.Item
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
-data class Series(
+data class Stories(
     @SerializedName("available")
     val available: Int,
     @SerializedName("collectionURI")

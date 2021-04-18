@@ -1,6 +1,4 @@
-package com.example.marvelapp.model
-
-import com.google.gson.annotations.SerializedName
+package com.example.marvelapp.model.comics
 
 data class Data(
     val count: Int,

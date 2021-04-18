@@ -7,9 +7,9 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.example.marvelapp.R
-import com.example.marvelapp.heroes.adapter.HeroesAdapter
-import com.example.marvelapp.model.Result
-import com.example.marvelapp.ui.extensions.hideKeyboard
+import com.example.marvelapp.adapter.adapter.heroes.HeroesAdapter
+import com.example.marvelapp.model.characters.Result
+//import com.example.marvelapp.ui.extensions.hideKeyboard
 import com.example.marvelapp.ui.viewmodel.ViewModelCharacters
 import kotlinx.android.synthetic.main.activity_searchable.*
 
@@ -33,7 +33,7 @@ class SearchableActivity : AppCompatActivity() {
             it?.let { itChar -> results.addAll(itChar) }
             Log.d("okhttp", "tamanho = ${results.size}")
             characterAdapter.heroesList = it
-            hideKeyboard()
+//            hideKeyboard()
         })
         viewModelCharacter.emptyField.observe(this, Observer {
             Toast.makeText(this, "errado", Toast.LENGTH_LONG).show()
@@ -41,7 +41,7 @@ class SearchableActivity : AppCompatActivity() {
 
         viewModelCharacter.errorMessage.observe(this, Observer {
             Toast.makeText(this, it, Toast.LENGTH_LONG).show()
-            hideKeyboard()
+//            hideKeyboard()
         })
     }
 }

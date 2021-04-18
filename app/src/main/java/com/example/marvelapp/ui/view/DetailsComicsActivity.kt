@@ -1,16 +1,14 @@
 package com.example.marvelapp.ui.view
 
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.marvelapp.R
-import com.example.marvelapp.comics.model.Comics
+import com.example.marvelapp.model.ui.ComicsUi
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_comic_detail.*
 
 class DetailsComicsActivity : AppCompatActivity() {
-    val comicNametxt by lazy { findViewById<TextView>(R.id.txt_comic_name_details) }
-    val comicImageiv by lazy { findViewById<ImageView>(R.id.iv_comic_image_details) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,19 +16,16 @@ class DetailsComicsActivity : AppCompatActivity() {
 
         val information = intent.extras
 
-        if(information!= null) {
-            val comicName = information.getString("NAME")
+        if (information != null) {
+            val comic = information.getSerializable("COMICS") as ComicsUi
+            txt_comic_name_details.text = comic.title
+            txt_synopsis_comic.text = comic.description
+            Picasso.get().load(comic.image?.path + ".jpg").into(iv_comic_image_details)
 
-            val comicImage = information.getInt("IMAGE",0)
-
-            val comicFound = Comics(comicName,
-                    comicImage)
-
-            comicNametxt.text = comicFound.name
-            comicImageiv.setImageResource(comicImage)
-        }else{
-            Toast.makeText(this,"Error loading", Toast.LENGTH_LONG).show()
+        } else {
+            Toast.makeText(this, "Error loading", Toast.LENGTH_LONG).show()
         }
+
 
     }
 }

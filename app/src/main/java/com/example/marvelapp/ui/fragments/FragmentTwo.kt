@@ -9,7 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.RecyclerView
 import com.example.marvelapp.R
-import com.example.marvelapp.heroes.adapter.HeroesAdapter
+import com.example.marvelapp.adapter.adapter.heroes.HeroesAdapter
 import com.example.marvelapp.ui.viewmodel.ViewModelCharacters
 
 

@@ -6,7 +6,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.marvelapp.R
-import com.example.marvelapp.model.Result
+import com.example.marvelapp.model.characters.Result
 import com.squareup.picasso.Picasso
 
 class DetailsHeroesActivity : AppCompatActivity() {

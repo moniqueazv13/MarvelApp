@@ -4,7 +4,7 @@ import android.text.Editable
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.marvelapp.model.Result
+import com.example.marvelapp.model.characters.Result
 import com.example.marvelapp.repository.RepositoryApi
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

@@ -1,12 +1,12 @@
-package com.example.marvelapp.heroes.adapter
+package com.example.marvelapp.adapter.adapter.heroes
 
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.marvelapp.R
-import com.example.marvelapp.heroes.adapter.viewholder.HeroesViewHolder
-import com.example.marvelapp.model.Result
+import com.example.marvelapp.adapter.adapter.heroes.viewholder.HeroesViewHolder
+import com.example.marvelapp.model.characters.Result
 import com.example.marvelapp.ui.view.DetailsHeroesActivity
 import com.squareup.picasso.Picasso
 
