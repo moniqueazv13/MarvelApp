@@ -47,7 +47,7 @@ class FragmentTwo : Fragment(R.layout.fragment_two) {
         }
 
         viewModelCharacter.errorMessage.observe(viewLifecycleOwner) {
-                Toast.makeText(activity, it, Toast.LENGTH_LONG).show()
+            Toast.makeText(activity, it, Toast.LENGTH_LONG).show()
         }
     }
 

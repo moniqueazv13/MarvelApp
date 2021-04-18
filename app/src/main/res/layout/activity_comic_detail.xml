@@ -16,18 +16,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="95dp"
+            android:layout_marginTop="40dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/iv_comic_image_details"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/logo_marvel">
 
             <TextView
                 android:id="@+id/txt_comic_name_details"
                 android:layout_width="211dp"
                 android:layout_height="76dp"
                 android:fontFamily="@font/robotocondensed_regular"
-                android:textAlignment="viewStart"
+                android:textAlignment="center"
                 android:textColor="#EDEDED"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -38,7 +38,7 @@
                 android:id="@+id/button_buy"
                 android:layout_width="193dp"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:backgroundTint="@color/vermelho"
                 android:padding="15dp"
@@ -69,10 +69,11 @@
             android:layout_height="213dp"
             android:layout_marginStart="6dp"
             android:layout_marginTop="40dp"
+            android:scaleType="fitXY"
             android:contentDescription="@string/hero_comic"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logo_marvel"
-            tools:src="@drawable/ic_launcher_background" />
+            tools:src="@drawable/ic_launcher_background"/>
 
         <LinearLayout
             android:id="@+id/layout_info_comics2"
@@ -94,7 +95,7 @@
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="357dp"
-                tools:text="By: Roy Thomas, Gil Kane" />
+                android:text="By: Roy Thomas, Gil Kane" />
 
             <TextView
                 android:id="@+id/txt_hero_date_details"
@@ -106,7 +107,7 @@
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="380dp"
-                tools:text="Released: Feb 3, 2021" />
+                android:text="Released: Feb 3, 2021" />
 
             <TextView
                 android:id="@+id/txt_comic_pages"
@@ -118,7 +119,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/txt_hero_date_details"
                 tools:layout_editor_absoluteY="403dp"
-                tools:text="Pages: 36" />
+                android:text="Pages: 36" />
         </LinearLayout>
 
         <LinearLayout
@@ -143,7 +144,7 @@
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="30dp"
                 tools:layout_editor_absoluteY="475dp"
-                tools:text="Summary" />
+                android:text="Summary" />
 
             <TextView
                 android:id="@+id/txt_synopsis_comic"
