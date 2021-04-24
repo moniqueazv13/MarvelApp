@@ -2,44 +2,57 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginHorizontal="0dp"
-    android:layout_marginVertical="0dp"
-    android:elevation="0dp"
+    android:layout_width="180dp"
+    android:layout_height="250dp"
+    android:layout_marginStart="6dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginEnd="6dp"
     android:maxHeight="250dp"
-    android:scrollbarSize="14sp"
-    card_view:cardBackgroundColor="#37171717"
-    card_view:cardCornerRadius="0dp">
+    card_view:cardBackgroundColor="#4D171717"
+    card_view:strokeColor="@color/white"
+    card_view:strokeWidth="1dp">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="0dp"
-        android:layout_marginStart="10dp"
-        android:orientation="vertical"
-        tools:ignore="UseCompoundDrawables">
+        android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_comic"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
             android:id="@+id/iv_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/hero_comic"
+            android:scaleType="fitXY"
             android:src="@drawable/ic_launcher_background"
-            android:contentDescription="@string/hero_comic" />
+            card_view:layout_constraintBottom_toTopOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="@font/abel_regular"
-            android:textAlignment="textStart"
+            android:layout_marginVertical="10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:maxLines="1"
+            android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@id/cl_comic"
             tools:text="Homem-Aranha" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>

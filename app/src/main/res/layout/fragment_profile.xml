@@ -101,7 +101,7 @@
             android:textSize="17sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_name"
-            tools:text="Jean" />
+            android:text="Jean" />
 
         <View
             android:id="@+id/view_line_2"
@@ -137,7 +137,7 @@
             android:fontFamily="@font/roboto_regular"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_last_name"
-            tools:text="Faria" />
+            android:text="Faria" />
 
         <View
             android:id="@+id/view_line_3"
@@ -175,7 +175,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_profile_email"
-            tools:text="jean_example@gmail.com" />
+            android:text="jean_example@gmail.com" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
