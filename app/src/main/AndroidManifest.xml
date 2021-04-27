@@ -12,23 +12,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MarvelApp"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.view.SearchableActivity"></activity>
-        <activity android:name=".ui.view.MainActivity" />
-        <activity android:name=".ui.view.QuizActivity" />
-        <activity android:name=".login.AccountAlreadyRegistered" />
-        <activity android:name=".login.CreateAnAccountActivity" />
-        <activity android:name=".login.CreateAPassword" />
-        <activity android:name=".login.ForgotYourPassword" />
-        <activity android:name=".login.LoginActivity" />
-        <activity android:name=".login.SplashScreenActivity">
+        <activity android:name=".presentation.home.SearchableActivity"></activity>
+        <activity android:name=".presentation.MainActivity" />
+        <activity android:name=".presentation.quiz.QuizActivity" />
+        <activity android:name="com.example.marvelapp.presentation.login.AccountAlreadyRegistered" />
+        <activity android:name="com.example.marvelapp.presentation.login.CreateAnAccountActivity" />
+        <activity android:name="com.example.marvelapp.presentation.login.CreateAPassword" />
+        <activity android:name="com.example.marvelapp.presentation.login.ForgotYourPassword" />
+        <activity android:name="com.example.marvelapp.presentation.login.LoginActivity" />
+        <activity android:name="com.example.marvelapp.presentation.login.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.view.DetailsComicsActivity" />
-        <activity android:name=".ui.view.DetailsHeroesActivity" />
+        <activity android:name=".presentation.home.details.DetailsComicsActivity" />
+        <activity android:name=".presentation.home.details.DetailsHeroesActivity" />
     </application>
 
 </manifest>

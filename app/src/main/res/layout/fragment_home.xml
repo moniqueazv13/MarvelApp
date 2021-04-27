@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/marvel_logo"
-    tools:context=".ui.about.AboutFragment">
+    tools:context=".presentation.about.AboutFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
