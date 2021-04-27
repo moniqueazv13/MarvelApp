@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MarvelApp"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.view.SearchableActivity"></activity>
+        <activity android:name=".ui.view.SearchableActivity" />
         <activity android:name=".ui.view.MainActivity" />
         <activity android:name=".ui.view.QuizActivity" />
         <activity android:name=".login.AccountAlreadyRegistered" />
@@ -29,6 +29,10 @@
         </activity>
         <activity android:name=".ui.view.DetailsComicsActivity" />
         <activity android:name=".ui.view.DetailsHeroesActivity" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
     </application>
 
 </manifest>
