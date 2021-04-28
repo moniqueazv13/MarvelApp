@@ -70,4 +70,7 @@
     <string name="buy_here">BUY HERE</string>
     <string name="confirm">Confirm</string>
     <string name="start_game">Start Game</string>
+    <string name="facebook_app_id">1234358823649086</string>
+    <string name="fb_login_protocol_scheme">fb1234358823649086</string>
+
 </resources>
