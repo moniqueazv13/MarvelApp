@@ -19,13 +19,14 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_heroes"
         android:layout_width="wrap_content"
-        android:layout_height="512dp"
+        android:layout_height="wrap_content"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:spanCount="2"
+        android:layout_marginTop="20dp"
         tools:listitem="@layout/hero_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

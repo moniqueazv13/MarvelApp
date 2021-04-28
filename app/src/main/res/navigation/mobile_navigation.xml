@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.marvelapp.ui.home.HomeFragment"
+        android:name="com.example.marvelapp.presentation.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_quiz"
-        android:name="com.example.marvelapp.ui.quiz.QuizFragment"
+        android:name="com.example.marvelapp.presentation.quiz.QuizFragment"
         android:label="@string/quiz"
         tools:layout="@layout/fragment_quiz" />
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.example.marvelapp.ui.profile.ProfileFragment"
+        android:name="com.example.marvelapp.presentation.profile.ProfileFragment"
         android:label="@string/profile"
         tools:layout="@layout/fragment_profile" />
 
     <fragment
         android:id="@+id/navigation_about"
-        android:name="com.example.marvelapp.ui.about.AboutFragment"
+        android:name="com.example.marvelapp.presentation.about.AboutFragment"
         android:label="@string/about"
         tools:layout="@layout/fragment_about" />
 </navigation>
