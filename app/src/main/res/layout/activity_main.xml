@@ -21,6 +21,7 @@
         android:id="@+id/nav_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:labelVisibilityMode="labeled"
         android:background="#ED171717"
         app:itemIconTint="@color/cinza_medio"
         app:itemTextColor="@color/cinza_medio"

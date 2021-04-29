@@ -3,21 +3,21 @@ package com.example.marvelapp.presentation.login
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.marvelapp.R
 import com.example.marvelapp.presentation.MainActivity
-import com.example.marvelapp.presentation.profile.ProfileFragment
 import com.facebook.AccessToken
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
 import com.facebook.FacebookException
 import com.facebook.login.LoginManager
 import com.facebook.login.LoginResult
-import com.facebook.login.widget.LoginButton
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
@@ -35,11 +35,7 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var callbackManager: CallbackManager
-    private lateinit var buttonFacebookLogin: LoginButton
     private val loginManager = LoginManager.getInstance()
-    private val emailTv by lazy { findViewById<TextView>(R.id.tiet_email1) }
-
-//    private val buttonSignInFac by lazy { findViewById<MaterialButton>(R.id.button_facebook) }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -104,7 +100,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun loginFacebook(){
+    private fun loginFacebook() {
         loginManager.logInWithReadPermissions(this, arrayListOf("email", "public_profile"))
         loginManager.registerCallback(callbackManager, object :
             FacebookCallback<LoginResult> {
@@ -155,7 +151,11 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun setUserName(name: String?) {
-        emailTv.text = name ?: ""
+        Toast.makeText(
+            baseContext, "Welcome, $name",
+            Toast.LENGTH_SHORT
+        ).show()
+
     }
 
     override fun onStart() {
@@ -164,17 +164,17 @@ class LoginActivity : AppCompatActivity() {
         setUserName(currentUser?.displayName)
     }
 
-    fun signinFace(view: View){
+    fun signingFace(view: View) {
         loginFacebook()
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
-
-    fun signout(view: View) {
-        firebaseAuth.signOut()
-        loginManager.logOut()
-
-        setUserName("Usuário desconectado")
-    }
+//
+//    fun signout(view: View) {
+//        firebaseAuth.signOut()
+//        loginManager.logOut()
+//
+//        setUserName("Usuário desconectado")
+//    }
 
 }
