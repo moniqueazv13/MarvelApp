@@ -139,32 +139,32 @@
             app:layout_constraintTop_toBottomOf="@id/button_sign_in1"
             tools:ignore="RtlHardcoded" />
 
-        <View
-            android:id="@+id/view_left1"
-            android:layout_width="100dp"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:background="#C4C4C4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button_create_an_account1" />
+<!--        <View-->
+<!--            android:id="@+id/view_left1"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:background="#C4C4C4"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/button_create_an_account1" />-->
 
-        <View
-            android:id="@+id/view_right1"
-            android:layout_width="100dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="20dp"
-            android:background="#C4C4C4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button_create_an_account1" />
+<!--        <View-->
+<!--            android:id="@+id/view_right1"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:background="#C4C4C4"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/button_create_an_account1" />-->
 
         <TextView
-            android:id="@+id/tv_message1"
+            android:id="@+id/tv_message4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/or_connect_using"
+            tools:text="@string/or_connect_using"
             android:fontFamily="@font/roboto_regular"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
@@ -180,11 +180,12 @@
             android:backgroundTint="@color/white"
             android:padding="15dp"
             android:text="@string/google"
+            android:onClick="signInGoogle"
             android:textAllCaps="false"
             android:textColor="@color/black"
             app:cornerRadius="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_message1" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_message4" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_facebook1"
@@ -199,7 +200,7 @@
             android:textColor="@color/white"
             app:cornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_message1" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_message4" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
