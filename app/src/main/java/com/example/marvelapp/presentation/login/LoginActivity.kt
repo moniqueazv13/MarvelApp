@@ -168,7 +168,7 @@ class LoginActivity : AppCompatActivity() {
         val signInIntent = googleSignInClient.signInIntent
         startActivityForResult(signInIntent, 200)
         val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
+        startActivity(intent),
     }
 
 }
