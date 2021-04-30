@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import androidx.lifecycle.ViewModelProvider
 import com.example.marvelapp.R
 import com.example.marvelapp.presentation.MainActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -26,8 +27,8 @@ class LoginActivity : AppCompatActivity() {
     private val buttonSignIn by lazy { findViewById<MaterialButton>(R.id.button_sign_in1) }
     private val emailField by lazy { findViewById<TextInputEditText>(R.id.tiet_email1) }
     private val passField by lazy { findViewById<TextInputEditText>(R.id.tiet_password1) }
-    private val emailInputLayout by lazy { findViewById<TextInputLayout>(R.id.til_email1) }
-    private val passInputLayout by lazy { findViewById<TextInputLayout>(R.id.til_password1) }
+    private val fieldLayoutEmail by lazy { findViewById<TextInputLayout>(R.id.til_email1) }
+    private val fieldLayoutPassword by lazy { findViewById<TextInputLayout>(R.id.til_password1) }
 
 
     //login google usando firebase abaixo.
@@ -38,10 +39,18 @@ class LoginActivity : AppCompatActivity() {
     private val emailTv by lazy { findViewById<TextView>(R.id.tv_message4) }
     private val buttonGoogleLogin by lazy { findViewById<Button>(R.id.button_google1) }
 
+    //crição do viewmodel
+
+    private lateinit var viewModel: LoginActivityViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        //quando passar pelo onCreate vamos pegar o LoginActivityViewModel e vai alocar ele na variavel viewmodel. Por isso, posso usar ela na minha classe inteira, possibilitando a mudança das lógicas para o viewmodel
+        viewModel = ViewModelProvider(this).get(LoginActivityViewModel::class.java)
+
+        configureValidationOfFields()
 
         createAnAccount()
 
@@ -116,29 +125,31 @@ class LoginActivity : AppCompatActivity() {
 
     private fun onFinishForm() {
 
-        val name = emailField?.text.toString()
-        val pass = passField?.text.toString()
+        val email = emailField?.text.toString()
+        val password = passField?.text.toString()
 
-        when {
-            name.isBlank() && pass.isBlank() -> {
-                emailInputLayout?.error = "Required"
-                passInputLayout?.error = "Required"
-            }
-            name.isBlank() -> {
-                emailInputLayout?.error = "Required"
-                passInputLayout?.error = null
-            }
-            pass.isBlank() -> {
-                passInputLayout?.error = "Required"
-                emailInputLayout?.error = null
-            }
-            else -> {
-                emailInputLayout?.error = null
-                passInputLayout?.error = null
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-            }
-        }
+        viewModel.validateEntryFields(email, password)
+//        val intent = Intent(this, MainActivity::class.java)
+//
+//        when {
+//            email.isBlank() && password.isBlank() -> {
+//                emailInputLayout?.error = "Required"
+//                passInputLayout?.error = "Required"
+//            }
+//            email.isBlank() -> {
+//                emailInputLayout?.error = "Required"
+//                passInputLayout?.error = null
+//            }
+//            password.isBlank() -> {
+//                passInputLayout?.error = "Required"
+//                emailInputLayout?.error = null
+//            }
+//            else -> {
+//                emailInputLayout?.error = null
+//                passInputLayout?.error = null
+//                startActivity(intent)
+//            }
+//        }
     }
 
     //login google usando firebase abaixo:
@@ -169,6 +180,36 @@ class LoginActivity : AppCompatActivity() {
         startActivityForResult(signInIntent, 200)
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
+    }
+
+    private fun configureValidationOfFields() {
+        viewModel.fieldEmail.observe(this){ emailValid ->
+            if (emailValid){
+                fieldLayoutEmail.error = null
+            } else{
+                fieldLayoutEmail.error = "Required"
+            }
+
+            navigateIfValid()
+        }
+
+        viewModel.fieldPassword.observe(this){ passValid ->
+            if (passValid){
+                fieldLayoutPassword.error = null
+            } else{
+                fieldLayoutPassword.error = "Required"
+            }
+
+            navigateIfValid()
+        }
+    }
+
+    private fun navigateIfValid(){
+        if (fieldLayoutPassword.error.isNullOrBlank() &&
+            fieldLayoutEmail.error.isNullOrBlank()){
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 }
