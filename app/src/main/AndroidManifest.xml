@@ -12,15 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MarvelApp"
         android:usesCleartextTraffic="true">
-        <activity android:name=".presentation.home.SearchableActivity"></activity>
+        <activity android:name=".presentation.login.FacebookLoginActivity" />
+        <activity android:name=".presentation.home.SearchableActivity" />
         <activity android:name=".presentation.MainActivity" />
         <activity android:name=".presentation.quiz.QuizActivity" />
-        <activity android:name="com.example.marvelapp.presentation.login.AccountAlreadyRegistered" />
-        <activity android:name="com.example.marvelapp.presentation.login.CreateAnAccountActivity" />
-        <activity android:name="com.example.marvelapp.presentation.login.CreateAPassword" />
-        <activity android:name="com.example.marvelapp.presentation.login.ForgotYourPassword" />
-        <activity android:name="com.example.marvelapp.presentation.login.LoginActivity" />
-        <activity android:name="com.example.marvelapp.presentation.login.SplashScreenActivity">
+        <activity android:name=".presentation.login.AccountAlreadyRegistered" />
+        <activity android:name=".presentation.login.CreateAnAccountActivity" />
+        <activity android:name=".presentation.login.CreateAPassword" />
+        <activity android:name=".presentation.login.ForgotYourPassword" />
+        <activity android:name=".presentation.login.LoginActivity" />
+        <activity android:name=".presentation.login.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,6 +30,10 @@
         </activity>
         <activity android:name=".presentation.home.details.DetailsComicsActivity" />
         <activity android:name=".presentation.home.details.DetailsHeroesActivity" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
     </application>
 
 </manifest>
