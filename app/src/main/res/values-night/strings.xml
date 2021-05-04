@@ -34,4 +34,6 @@
     <string name="your_profile">Your Profile</string>
     <string name="user_information">User Information</string>
     <string name="welcome_to_the_marvel_quiz">WELCOME TO THE MARVEL QUIZ!!!</string>
+    <string name="facebook_app_id">1234358823649086</string>
+    <string name="fb_login_protocol_scheme">fb1234358823649086</string>
 </resources>
