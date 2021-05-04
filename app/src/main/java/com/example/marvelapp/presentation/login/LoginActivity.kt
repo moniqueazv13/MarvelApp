@@ -4,36 +4,30 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.util.Log
-import android.view.Gravity
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
-import androidx.lifecycle.ViewModelProvider
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.example.marvelapp.R
 import com.example.marvelapp.presentation.MainActivity
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.common.api.ApiException
 import com.facebook.AccessToken
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
 import com.facebook.FacebookException
 import com.facebook.login.LoginManager
 import com.facebook.login.LoginResult
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.api.ApiException
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.GoogleAuthProvider
-import java.lang.Exception
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.GoogleAuthProvider
+
 
 class LoginActivity : AppCompatActivity() {
     private val buttonCreateAccount by lazy { findViewById<Button>(R.id.button_create_an_account1) }
@@ -57,7 +51,6 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var viewModel: LoginActivityViewModel
 
-    private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var callbackManager: CallbackManager
     private val loginManager = LoginManager.getInstance()
 
@@ -147,27 +140,6 @@ class LoginActivity : AppCompatActivity() {
         val password = passField?.text.toString()
 
         viewModel.validateEntryFields(email, password)
-//        val intent = Intent(this, MainActivity::class.java)
-//
-//        when {
-//            email.isBlank() && password.isBlank() -> {
-//                emailInputLayout?.error = "Required"
-//                passInputLayout?.error = "Required"
-//            }
-//            email.isBlank() -> {
-//                emailInputLayout?.error = "Required"
-//                passInputLayout?.error = null
-//            }
-//            password.isBlank() -> {
-//                passInputLayout?.error = "Required"
-//                emailInputLayout?.error = null
-//            }
-//            else -> {
-//                emailInputLayout?.error = null
-//                passInputLayout?.error = null
-//                startActivity(intent)
-//            }
-//        }
     }
 
     //login google usando firebase abaixo:
