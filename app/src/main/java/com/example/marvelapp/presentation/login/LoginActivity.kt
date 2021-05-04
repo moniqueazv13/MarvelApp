@@ -45,7 +45,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var googleSignInClient: GoogleSignInClient
     private val emailTv by lazy { findViewById<TextView>(R.id.tv_message4) }
-    private val buttonGoogleLogin by lazy { findViewById<Button>(R.id.button_google1) }
+    private var tryLoginFacebook = false
 
     //crição do viewmodel
 
@@ -84,7 +84,7 @@ class LoginActivity : AppCompatActivity() {
 
 //        buttonGoogleLogin.setOnClickListener { signInGoogle(it) } //faltou o it
 
-          callbackManager = CallbackManager.Factory.create()
+        callbackManager = CallbackManager.Factory.create()
     }
 
     //login google usando firebase abaixo:
@@ -110,7 +110,10 @@ class LoginActivity : AppCompatActivity() {
         }
 
         // Pass the activity result back to the Facebook SDK
-        callbackManager.onActivityResult(requestCode, resultCode, data)
+        if (tryLoginFacebook) {
+            callbackManager.onActivityResult(requestCode, resultCode, data)
+        }
+
     }
 
 
@@ -152,7 +155,9 @@ class LoginActivity : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d("GoogleSign", "signInWithCredential:success")
                     val user = firebaseAuth.currentUser
-                    setUserEmail(user?.email ?: "Usuário desconectado")
+                    Toast.makeText(this, "Welcome ${user.displayName}", Toast.LENGTH_LONG).show()
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w("GoogleSign", "signInWithCredential:failure", task.exception)
@@ -168,25 +173,23 @@ class LoginActivity : AppCompatActivity() {
     fun signInGoogle(view: View) {
         val signInIntent = googleSignInClient.signInIntent
         startActivityForResult(signInIntent, 200)
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
     }
 
     private fun configureValidationOfFields() {
-        viewModel.fieldEmail.observe(this){ emailValid ->
-            if (emailValid){
+        viewModel.fieldEmail.observe(this) { emailValid ->
+            if (emailValid) {
                 fieldLayoutEmail.error = null
-            } else{
+            } else {
                 fieldLayoutEmail.error = "Required"
             }
 
             navigateIfValid()
         }
 
-        viewModel.fieldPassword.observe(this){ passValid ->
-            if (passValid){
+        viewModel.fieldPassword.observe(this) { passValid ->
+            if (passValid) {
                 fieldLayoutPassword.error = null
-            } else{
+            } else {
                 fieldLayoutPassword.error = "Required"
             }
 
@@ -194,9 +197,10 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun navigateIfValid(){
+    private fun navigateIfValid() {
         if (fieldLayoutPassword.error.isNullOrBlank() &&
-            fieldLayoutEmail.error.isNullOrBlank()){
+            fieldLayoutEmail.error.isNullOrBlank()
+        ) {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
@@ -253,18 +257,12 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
-    override fun onStart() {
-        super.onStart()
-        val currentUser = firebaseAuth.currentUser
-        setUserName(currentUser?.displayName)
-        setUserEmail(currentUser?.email ?: "Usuário desconectado")
-
-    }
 
     fun signingFace(view: View) {
         loginFacebook()
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
+        tryLoginFacebook = true
     }
 //
 //    fun signout(view: View) {
