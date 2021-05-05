@@ -185,7 +185,7 @@
             android:backgroundTint="#C23B5998"
             android:padding="15dp"
             android:text="@string/facebook"
-            android:onClick="signingFace"
+            android:onClick="signInFace"
             android:textAllCaps="false"
             android:textColor="@color/white"
             app:cornerRadius="10dp"
