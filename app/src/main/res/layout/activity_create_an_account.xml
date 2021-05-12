@@ -20,15 +20,16 @@
 
     <TextView
         android:id="@+id/tv_title2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginHorizontal="20dp"
         android:layout_marginTop="15dp"
         android:text="@string/text_create_account"
         android:textColor="@color/white"
         android:fontFamily="@font/robotocondensed_regular"
         android:textSize="23sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_marvel4" />
 
@@ -53,7 +54,7 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/rounded_corners"
-        android:hint="@string/edText_name"
+        android:hint="@string/edText_email_user_creation"
         android:fontFamily="@font/roboto_regular"
         android:inputType="text"
         android:maxLines="1"
@@ -64,13 +65,13 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_message2" />
 
     <EditText
-        android:id="@+id/et_last_name2"
+        android:id="@+id/et_password_user_creation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/rounded_corners"
-        android:hint="@string/edText_last_name"
+        android:hint="@string/edText_password_user_creation"
         android:fontFamily="@font/roboto_regular"
         android:inputType="text"
         android:maxLines="1"
@@ -81,13 +82,13 @@
         app:layout_constraintTop_toBottomOf="@id/et_name2" />
 
     <EditText
-        android:id="@+id/et_email_adress2"
+        android:id="@+id/et_password_user_confirmation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/rounded_corners"
-        android:hint="@string/edText_email"
+        android:hint="@string/edText_confirm_password_user_creation"
         android:fontFamily="@font/roboto_regular"
         android:inputType="text"
         android:maxLines="1"
@@ -95,7 +96,7 @@
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_last_name2"
+        app:layout_constraintTop_toBottomOf="@id/et_password_user_creation"
         tools:ignore="TextFields" />
 
     <com.google.android.material.button.MaterialButton
@@ -103,13 +104,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
+        android:onClick="createUser"
         android:backgroundTint="#EDC5211C"
         android:padding="20dp"
         android:text="@string/text_continue"
         android:fontFamily="@font/roboto_regular"
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_email_adress2" />
+        app:layout_constraintTop_toBottomOf="@+id/et_password_user_confirmation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

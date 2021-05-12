@@ -242,8 +242,23 @@ class LoginActivity : AppCompatActivity() {
         if (fieldLayoutPassword.error.isNullOrBlank() &&
             fieldLayoutEmail.error.isNullOrBlank()
         ) {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+
+            val email = emailField?.text.toString()
+            val password = passField?.text.toString()
+
+            firebaseAuthWithEmailPass(email, password)
+        }
+    }
+
+    private fun firebaseAuthWithEmailPass(email: String, pass: String) {
+        firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                val user = firebaseAuth.currentUser
+                Toast.makeText(this, user?.email ?: "Usuário desconectado", Toast.LENGTH_LONG).show()
+                startActivity(Intent(this, MainActivity::class.java))
+            } else {
+                Toast.makeText(this, task.exception?.message!!, Toast.LENGTH_LONG).show()
+            }
         }
     }
 
