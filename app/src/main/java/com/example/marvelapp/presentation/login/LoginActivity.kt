@@ -254,7 +254,7 @@ class LoginActivity : AppCompatActivity() {
         firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 val user = firebaseAuth.currentUser
-                Toast.makeText(this, user?.email ?: "Usuário desconectado", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Welcome ${user?.email ?: "Usuário desconectado"}" , Toast.LENGTH_LONG).show()
                 startActivity(Intent(this, MainActivity::class.java))
             } else {
                 Toast.makeText(this, task.exception?.message!!, Toast.LENGTH_LONG).show()
