@@ -39,7 +39,6 @@ class LoginActivity : AppCompatActivity() {
     private val fieldLayoutPassword by lazy { findViewById<TextInputLayout>(R.id.til_password1) }
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var googleSignInClient: GoogleSignInClient
-    private val emailTv by lazy { findViewById<TextView>(R.id.tv_message4) }
     private var tryLoginFacebook = false
 
     private lateinit var viewModel: LoginActivityViewModel
@@ -181,10 +180,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun setUserName(name: String?) {
-        Toast.makeText(
-            baseContext, "Welcome, $name",
-            Toast.LENGTH_SHORT
-        ).show()
+        Toast.makeText(baseContext, "Welcome, $name", Toast.LENGTH_SHORT).show()
 
     }
 
