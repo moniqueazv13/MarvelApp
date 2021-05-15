@@ -32,11 +32,11 @@
     <string name="text_password_3">Passwords must match</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="text_button_create_a_password">CREATE AN ACCOUNT AND SIGN IN</string>
-    <string name="text_create_account">Enter your name and email address</string>
+    <string name="text_create_account">Enter a valid email address and a password</string>
     <string name="text_create_account_2">We’ll use this to sign you in or to create an account if you don’t have one yet.</string>
-    <string name="edText_name">Name</string>
-    <string name="edText_last_name">Last Name</string>
-    <string name="edText_email">Email Address</string>
+    <string name="edText_email">E-mail</string>
+    <string name="edText_password_user_creation">Password</string>
+    <string name="edText_confirm_password_user_creation">Confirm your Password</string>
     <string name="text_continue">CONTINUE</string>
     <string name="texte_forgot_your_password">Forgot your password?</string>
     <string name="text_forgot_your_password_2">No problem! We’ll send you a link to reset it. Enter in the field below the email address you use to sign in to Marvel.</string>
@@ -72,5 +72,9 @@
     <string name="start_game">Start Game</string>
     <string name="facebook_app_id">1234358823649086</string>
     <string name="fb_login_protocol_scheme">fb1234358823649086</string>
+    <string name="sign_out">SIGN OUT</string>
+    <string name="name">Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="e_mail">E-mail</string>
 
 </resources>

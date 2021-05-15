@@ -83,7 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
-            android:text="@string/edText_name"
+            android:text="@string/name"
             android:fontFamily="@font/roboto_regular"
             android:textColor="#908E8E"
             android:textStyle="bold"
@@ -101,43 +101,7 @@
             android:textSize="17sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_name"
-            android:text="Jean" />
-
-        <View
-            android:id="@+id/view_line_2"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="5dp"
-            android:background="#C4C4C4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txt_user_name" />
-
-        <TextView
-            android:id="@+id/txt_last_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
-            android:text="@string/edText_last_name"
-            android:fontFamily="@font/roboto_regular"
-            android:textColor="#908E8E"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view_line_2" />
-
-        <TextView
-            android:id="@+id/txt_user_last_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
-            android:textColor="@color/black"
-            android:textSize="17sp"
-            android:fontFamily="@font/roboto_regular"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_last_name"
-            android:text="Faria" />
+            tools:text="Jean" />
 
         <View
             android:id="@+id/view_line_3"
@@ -147,7 +111,7 @@
             android:layout_marginTop="5dp"
             android:background="#C4C4C4"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txt_user_last_name" />
+            app:layout_constraintTop_toBottomOf="@id/txt_user_name" />
 
         <TextView
             android:id="@+id/txt_profile_email"
@@ -155,7 +119,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
-            android:text="@string/edText_email"
+            android:text="@string/e_mail"
             android:fontFamily="@font/roboto_regular"
             android:textColor="#908E8E"
             android:textStyle="bold"
@@ -172,10 +136,28 @@
             android:textColor="@color/black"
             android:fontFamily="@font/roboto_regular"
             android:textSize="17sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/button_sign_out"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_profile_email"
-            android:text="jean_example@gmail.com" />
+            tools:text="jean_example@gmail.com" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_sign_out"
+            android:layout_width="159dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:backgroundTint="#D10E25"
+            android:padding="15dp"
+            android:text="@string/sign_out"
+            android:textColor="@color/white"
+            app:cornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_profile_user_email"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

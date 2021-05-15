@@ -20,15 +20,16 @@
 
     <TextView
         android:id="@+id/tv_title2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginHorizontal="20dp"
         android:layout_marginTop="15dp"
+        android:fontFamily="@font/robotocondensed_regular"
         android:text="@string/text_create_account"
         android:textColor="@color/white"
-        android:fontFamily="@font/robotocondensed_regular"
         android:textSize="23sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_marvel4" />
 
@@ -38,78 +39,113 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto_regular"
         android:text="@string/text_create_account_2"
         android:textColor="@color/white"
-        android:fontFamily="@font/roboto_regular"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_title2" />
 
-    <EditText
-        android:id="@+id/et_name2"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_email_new_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/rounded_corners"
-        android:hint="@string/edText_name"
-        android:fontFamily="@font/roboto_regular"
-        android:inputType="text"
-        android:maxLines="1"
-        android:padding="15dp"
         android:textColorHint="@color/black"
+        app:boxBackgroundColor="@color/white"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:errorTextColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_message2" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_message2">
 
-    <EditText
-        android:id="@+id/et_last_name2"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email_new_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="@string/edText_email"
+            android:inputType="textWebEmailAddress"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_password_user_creation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="50dp"
+        android:textColorHint="@color/black"
+        app:boxBackgroundColor="@color/white"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:errorTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_email_new_user"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_password_user_creation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_password_user_confirmation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/rounded_corners"
-        android:hint="@string/edText_last_name"
-        android:fontFamily="@font/roboto_regular"
-        android:inputType="text"
-        android:maxLines="1"
-        android:padding="15dp"
         android:textColorHint="@color/black"
+        app:boxBackgroundColor="@color/white"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:errorTextColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_name2" />
+        app:layout_constraintTop_toBottomOf="@+id/til_password_user_creation"
+        app:passwordToggleEnabled="true">
 
-    <EditText
-        android:id="@+id/et_email_adress2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="70dp"
-        android:background="@drawable/rounded_corners"
-        android:hint="@string/edText_email"
-        android:fontFamily="@font/roboto_regular"
-        android:inputType="text"
-        android:maxLines="1"
-        android:padding="15dp"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_last_name2"
-        tools:ignore="TextFields" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_password_user_confirmation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="@string/edText_confirm_password_user_creation"
+            android:inputType="textPassword"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_sign_in1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#EDC5211C"
-        android:padding="20dp"
-        android:text="@string/text_continue"
         android:fontFamily="@font/roboto_regular"
+        android:onClick="createUser"
+        android:padding="20dp"
+        android:text="@string/text_button_create_a_password"
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_email_adress2" />
+        app:layout_constraintTop_toBottomOf="@+id/til_password_user_confirmation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

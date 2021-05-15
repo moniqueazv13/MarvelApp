@@ -6,8 +6,8 @@
     <string name="text_password">Your password must be at least 10 characters</string>
     <string name="text_password_3">Passwords must match</string>
     <string name="text_create_account">Enter your name and email adress</string>
-    <string name="edText_last_name">Last Name</string>
-    <string name="edText_email">Email Adress</string>
+    <string name="edText_password_user_creation">Password</string>
+    <string name="edText_confirm_password_user_creation">Email Adress</string>
     <string name="text_continue">CONTINUE</string>
     <string name="texte_forgot_your_password">Forgot your password?</string>
     <string name="text_forgot_your_password_2">No problem! We’ll send you a link to reset it. Enter in the field below the email address you use to sign in to Marvel.</string>

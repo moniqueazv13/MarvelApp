@@ -39,7 +39,6 @@ class LoginActivity : AppCompatActivity() {
     private val fieldLayoutPassword by lazy { findViewById<TextInputLayout>(R.id.til_password1) }
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var googleSignInClient: GoogleSignInClient
-    private val emailTv by lazy { findViewById<TextView>(R.id.tv_message4) }
     private var tryLoginFacebook = false
 
     private lateinit var viewModel: LoginActivityViewModel
@@ -181,10 +180,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun setUserName(name: String?) {
-        Toast.makeText(
-            baseContext, "Welcome, $name",
-            Toast.LENGTH_SHORT
-        ).show()
+        Toast.makeText(baseContext, "Welcome, $name", Toast.LENGTH_SHORT).show()
 
     }
 
@@ -242,8 +238,23 @@ class LoginActivity : AppCompatActivity() {
         if (fieldLayoutPassword.error.isNullOrBlank() &&
             fieldLayoutEmail.error.isNullOrBlank()
         ) {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+
+            val email = emailField?.text.toString()
+            val password = passField?.text.toString()
+
+            firebaseAuthWithEmailPass(email, password)
+        }
+    }
+
+    private fun firebaseAuthWithEmailPass(email: String, pass: String) {
+        firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                val user = firebaseAuth.currentUser
+                Toast.makeText(this, "Welcome ${user?.email ?: "Usuário desconectado"}" , Toast.LENGTH_LONG).show()
+                startActivity(Intent(this, MainActivity::class.java))
+            } else {
+                Toast.makeText(this, task.exception?.message!!, Toast.LENGTH_LONG).show()
+            }
         }
     }
 
