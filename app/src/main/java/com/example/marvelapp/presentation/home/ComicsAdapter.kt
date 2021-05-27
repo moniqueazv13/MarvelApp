@@ -1,4 +1,4 @@
-package com.example.marvelapp.adapter.adapter.comics
+package com.example.marvelapp.presentation.home
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -46,8 +46,11 @@ class ComicsAdapter() : RecyclerView.Adapter<ComicsViewHolder>() {
 
     override fun onBindViewHolder(holder: ComicsViewHolder, position: Int) {
         val comics = comicsList[position]
-        holder.comicName.text = comics.title
-        Picasso.get().load(comics.image?.path + ".jpg").into(holder.comicImage)
+//        holder.comicName.text = comics.title
+        holder.comicName.text  =  comics.id.toString()
+        comics.image?.let {
+            Picasso.get().load(it).into(holder.comicImage)
+        }
 
         holder.itemView.setOnClickListener {
             val intent = Intent(it.context, DetailsComicsActivity::class.java)
