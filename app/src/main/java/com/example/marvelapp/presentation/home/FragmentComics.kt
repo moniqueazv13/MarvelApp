@@ -6,10 +6,10 @@ import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.RecyclerView
 import com.example.marvelapp.R
-import com.example.marvelapp.adapter.adapter.comics.ComicsAdapter
 
 
 class FragmentComics : Fragment(R.layout.fragment_one) {
@@ -27,6 +27,11 @@ class FragmentComics : Fragment(R.layout.fragment_one) {
     }
 
     private fun observeEvents() {
+        viewModelComics.post.observe(viewLifecycleOwner, Observer {
+//            Toast.makeText(activity, it, Toast.LENGTH_LONG).show()
+
+        })
+
         viewModelComics.listMutableComics.observe(viewLifecycleOwner) { comics ->
             comicsAdapter.comicsList = comics
         }
