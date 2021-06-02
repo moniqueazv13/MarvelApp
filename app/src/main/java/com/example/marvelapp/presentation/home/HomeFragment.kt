@@ -10,10 +10,7 @@ import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val viewPagerAdapter =
-            MyPagerAdapter(
-                childFragmentManager
-            )
+        val viewPagerAdapter = MyPagerAdapter(childFragmentManager)
         viewPagerAdapter.addFragment(FragmentComics(), "Comics")
         viewPagerAdapter.addFragment(FragmentHeroes(), "Heroes")
         viewPager.adapter = viewPagerAdapter

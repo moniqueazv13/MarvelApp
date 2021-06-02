@@ -77,5 +77,31 @@
     <string name="name">Name</string>
     <string name="last_name">Last Name</string>
     <string name="e_mail">E-mail</string>
+    <string name="quiz_total">Você sabe tudo sobre os heróis da Marvel?</string>
+    <string name="item">item</string>
+    <string name="pergunta_um">Qual o nome do meio de Peter Paker?</string>
+    <string name="fragment_resposta_um">Fleck</string>
+    <string name="fragment_resposta_dois">Wayne</string>
+    <string name="fragment_resposta_tres">Benjamin</string>
+    <string name="fragment_resposta_quatro">Stark</string>
+    <string name="json">perguntas.json</string>
+    <string name="perguntas">perguntas</string>
+    <string name="nome">nome</string>
+    <string name="pergunta">pergunta</string>
+    <string name="alt_1">alternativa1</string>
+    <string name="alt_2">alternativa2</string>
+    <string name="alt_3">alternativa3</string>
+    <string name="alt_4">alternativa4</string>
+    <string name="resposta">resposta</string>
+    <string name="correto">correto</string>
+    <string name="errado">errado</string>
+    <string name="titulo">titulo</string>
+    <string name="_80">80%</string>
+    <string name="quest_corretas">3/5 questões corretas</string>
+    <string name="resultado">Resultado:</string>
+    <string name="simbolo_barra">/</string>
+    <string name="resp_corretas">\u0020 questões corretas</string>
+    <string name="result">Veja, esse foi o meu resultado no Quiz Marvel! Baixe o App Marvel Time no Google Play e teste os seus conhecimentos também!</string>
+    <string name="questoes_corretas">/5 questões corretas!</string>
 
 </resources>
