@@ -46,8 +46,8 @@ class ComicsAdapter() : RecyclerView.Adapter<ComicsViewHolder>() {
 
     override fun onBindViewHolder(holder: ComicsViewHolder, position: Int) {
         val comics = comicsList[position]
-//        holder.comicName.text = comics.title
-        holder.comicName.text  = "# " + comics.id.toString()
+        holder.comicName.text = comics.title
+//        holder.comicName.text  = "# " + comics.id.toString()
         comics.image?.let {
             Picasso.get().load(it).into(holder.comicImage)
         }
