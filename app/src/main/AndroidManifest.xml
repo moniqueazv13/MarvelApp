@@ -12,13 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MarvelApp"
         android:usesCleartextTraffic="true">
-        <activity android:name=".presentation.login.FacebookLoginActivity" />
         <activity android:name=".presentation.home.SearchableActivity" />
         <activity android:name=".presentation.MainActivity" />
         <activity android:name=".presentation.quiz.QuizActivity" />
         <activity android:name=".presentation.login.AccountAlreadyRegistered" />
         <activity android:name=".presentation.login.CreateAnAccountActivity" />
-        <activity android:name=".presentation.login.CreateAPassword" />
         <activity android:name=".presentation.login.ForgotYourPassword" />
         <activity android:name=".presentation.login.LoginActivity" />
         <activity android:name=".presentation.login.SplashScreenActivity">

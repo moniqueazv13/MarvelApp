@@ -15,5 +15,7 @@
     <color name="cinza_claro">#625F5F</color>
     <color name="cinza_medio">#3F3D3D</color>
     <color name="cinza_escuro">#171717</color>
+    <color name="backgroundButtonPretoComOpacidade">#92000000</color>
+    <color name="backgroundBrancoComOpacidade">#68FFFFFF</color>
 
 </resources>

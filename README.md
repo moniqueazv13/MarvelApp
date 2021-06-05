@@ -1,99 +1,67 @@
-# The Marvel Journey
+# The Marvel Journey App
 
-Esse aplicativo está sendo desenvolvido como projeto do curso
-
-## 🚀 Começando
-
-Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
-
-Consulte **Implantação** para saber como implantar o projeto.
-
-### 📋 Pré-requisitos
-
-De que coisas você precisa para instalar o software e como instalá-lo?
-
-```
-Dar exemplos
-```
-
-### 🔧 Instalação
-
-Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
-
-Diga como essa etapa será:
-
-```
-Dar exemplos
-```
-
-E repita:
-
-```
-Até finalizar
-```
-
-Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
-
-## ⚙️ Executando os testes
-
-Explicar como executar os testes automatizados para este sistema.
-
-### 🔩 Analise os testes de ponta a ponta
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
-### ⌨️ E testes de estilo de codificação
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
-## 📦 Desenvolvimento
-
-Adicione notas adicionais sobre como implantar isso em um sistema ativo
-
-## 🛠️ Construído com
-
-Mencione as ferramentas que você usou para criar seu projeto
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
-* [Maven](https://maven.apache.org/) - Gerente de Dependência
-* [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
-
-## 🖇️ Colaborando
-
-Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoSobreContribuicoes) para obter detalhes sobre o nosso código de conduta e o processo para nos enviar pedidos de solicitação.
-
-## 📌 Versão
-
-Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto). 
-
-## ✒️ Autores
-
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
-
-* **Um desenvolvedor** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/linkParaPerfil)
-* **Fulano De Tal** - *Documentação* - [fulanodetal](https://github.com/linkParaPerfil)
-
-Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
-
-## 📄 Licença
-
-Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](https://github.com/usuario/projeto/licenca) para detalhes.
-
-## 🎁 Expressões de gratidão
-
-* Conte a outras pessoas sobre este projeto 📢
-* Convide alguém da equipe para uma cerveja 🍺 
-* Obrigado publicamente 🤓.
-* etc.
+O aplicativo marvel journey app é o primeiro (esperamos que de muitos) aplicativos desenvolvidos pelos recém formados desenvolvedores android Monique, Jean, Aline e Leonardo
 
 
----
-⌨️ com ❤️ por [Armstrong Lohãns](https://gist.github.com/lohhans) 😊
+O aplicativo traz os detalhes de comics e heróis da Marvel e permite que o usuário busque por heróis de sua preferência. Além disso, o usuário pode também testar seus conhecimentos sobre o mundo Marvel por um Quiz, que traz perguntas sobre os principais heróis da Marvel. O aplicativo também pode redirecionar os usuários para o site da API Marvel, para que desenvolvedores possam desbravar os recursos disponíveis no site para criar seus próprios apps.
+
+------------
+<br>
+
+#### Alguns Screenshots
+<img src="https://github.com/moniqueazv13/The-Marvel-Journey/blob/develop/app/src/main/res/drawable-v24/screenshot_a.png" width="260">   <img src="https://github.com/moniqueazv13/The-Marvel-Journey/blob/develop/app/src/main/res/drawable-v24/screenshot_b.png" width="260">
+
+<img src="https://github.com/moniqueazv13/The-Marvel-Journey/blob/develop/app/src/main/res/drawable-v24/screenshot_c.png" width="260">   <img src="https://github.com/moniqueazv13/The-Marvel-Journey/blob/develop/app/src/main/res/drawable-v24/screenshot_d.png" width="260">
+
+
+------------
+<br>
+
+#### API
+
+A API utilizada é a da Marvel, disponível em: https://developer.marvel.com/
+
+------------
+<br>
+
+#### Arquitetura
+
+A arquitetura utilizada é a MVVM
+
+------------
+<br>
+
+
+#### Principais conceitos utilizados
+
+**Realtime Database:** 
+
+
+
+
+**Login com Firebase:** Uso da plataforma do Firebase para realização de login com e-mail e senha sem a necessidade de usar redes sociais
+
+**Login com Redes Sociais:** Conexão com bibliotecas do Facebook e Google para permitir o usuário logar no aplicativo com o uso de suas redes sociais. A cada login a informação do usuário é armazenada no Firebase
+
+**Uso de Activities e Fragments:** Para permitir a criação de um design adequado ao uso do aplicativo
+
+**TabLayout:** Para facilitar a navegação no aplicativo. Recurso usado em aplicativos de grande utilização como o Whatsapp
+
+**Dialog Fragment Customizado:** Fragment usado para interação com o usuário no Quiz, permitindo uma identificação visual mais customizada com o tema do app
+
+**RecyclerView:** Recurso amplamente disseminado em aplicativos, como o facebook e ifood. No app permite a visualização mais adequada dos comics e heróis da Marvel
+
+**Material Design:** Uso de cores e fontes que possuem harmonização adequada, gerando uma identificação visual com o universo Marvel.
+
+------------
+<br>
+
+#### O que gostaríamos de ter feito?
+
+**Clean Code e Clean Architecture:** Facilitaria a manutenção do código e traria estabilidade para a aplicação
+
+**Pontuação Dinâmica do Quiz:** Permitiria o usuário saber sua pontuação em tempo real
+
+**Paginação do RecyclerView:** Possibilitaria inflar no recyclerview do app todos os comics e heróis disponíveis na API da Marvel 
+
+**Auto Complete no Search:** Facilitaria a busca de heróis e comics pelo usuário;
