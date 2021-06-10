@@ -6,8 +6,8 @@
     <string name="dialog_hint_title">CHECK YOUR HINT</string>
     <string name="text_hint">After an alien device mutated her DNA, Danvers transformed from a merely brilliant pilot into one of the most powerful Super Heroes in the universe. Now soaring among the stars, Carol Danvers is known as Captain Marvel.</string>
     <string name="dialog_title_right">OH YEAH! YOU WIN :)</string>
-    <string name="point_plus">+1 MARVEL POINT</string>
-    <string name="point_minus">-1 MARVEL POINT</string>
+    <string name="point_plus">+20 MARVEL POINTS</string>
+    <string name="point_minus">NO MARVEL POINTS RECEIVED</string>
     <string name="hint_back">BACK TO GAME</string>
     <string name="quit_game">QUIT GAME</string>
     <string name="continue_r">CONTINUE</string>
@@ -77,9 +77,9 @@
     <string name="name">Name</string>
     <string name="last_name">Last Name</string>
     <string name="e_mail">E-mail</string>
-    <string name="quiz_total">Você sabe tudo sobre os heróis da Marvel?</string>
+    <string name="quiz_total">Do you know everything about Marvel heroes?</string>
     <string name="item">item</string>
-    <string name="pergunta_um">Qual o nome do meio de Peter Paker?</string>
+    <string name="pergunta_um">"What is Peter Paker's middle name?"</string>
     <string name="fragment_resposta_um">Fleck</string>
     <string name="fragment_resposta_dois">Wayne</string>
     <string name="fragment_resposta_tres">Benjamin</string>
@@ -97,11 +97,11 @@
     <string name="errado">errado</string>
     <string name="titulo">titulo</string>
     <string name="_80">80%</string>
-    <string name="quest_corretas">3/5 questões corretas</string>
-    <string name="resultado">Resultado:</string>
+    <string name="quest_corretas">3/5 right answers</string>
+    <string name="resultado">"You've got"</string>
     <string name="simbolo_barra">/</string>
-    <string name="resp_corretas">\u0020 questões corretas</string>
+    <string name="resp_corretas">\u0020 right answers</string>
     <string name="result">Veja, esse foi o meu resultado no Quiz Marvel! Baixe o App Marvel Time no Google Play e teste os seus conhecimentos também!</string>
-    <string name="questoes_corretas">/5 questões corretas!</string>
+    <string name="questoes_corretas">/5 right answers</string>
 
 </resources>

@@ -2,7 +2,7 @@
   "perguntas": [
     {
       "nome": "1",
-      "pergunta": "Qual o nome do meio de Peter Parker?",
+      "pergunta": "What is Petter Parker's middle name?",
       "alternativa1": "FLECK",
       "alternativa2": "WAYNE",
       "alternativa3": "BENJAMIN",
@@ -11,25 +11,25 @@
     },
     {
     "nome": "1",
-    "pergunta": "Qual é o apelido do Homem Aranha?",
-    "alternativa1": "CABEÇA DE ARANHA",
-    "alternativa2": "CABEÇA DE TEIA",
-    "alternativa3": "HOMEM TEIA",
-    "alternativa4": "AMEAÇA ARANHA",
-    "resposta": "CABEÇA DE TEIA"
+    "pergunta": "What is Spider Man's nickname?",
+    "alternativa1": "SPIDER HEAD",
+    "alternativa2": "WEB-HEAD",
+    "alternativa3": "WEB-MAN",
+    "alternativa4": "SPIDER THREAT",
+    "resposta": "WEB-HEAD"
     },
     {
       "nome": "1",
-      "pergunta": "Os pais do Homem Aranha eram:",
-      "alternativa1": "AGENTES DA S.H.I.E.L.D",
-      "alternativa2": "SUPERHERÓIS",
-      "alternativa3": "PESSOAS COMUNS",
-      "alternativa4": "DONOS DE UM LABORATÓRIO",
-      "resposta": "AGENTES DA S.H.I.E.L.D"
+      "pergunta": "Spider-Man's fathers were:",
+      "alternativa1": "AGENTS OF S.H.I.E.L.D",
+      "alternativa2": "SUPERHEROES",
+      "alternativa3": "ORDINARY PEOPLE",
+      "alternativa4": "LAB OWNERS",
+      "resposta": "AGENTS OF S.H.I.E.L.D"
     },
     {
       "nome": "1",
-      "pergunta": "O Homem Aranha quase foi interpretado por:",
+      "pergunta": "Spider-Man was almost interpreted by:",
       "alternativa1": "LEONARDO DICAPRIO",
       "alternativa2": "JOAQUIN PHOENIX",
       "alternativa3": "BRAD PITT",
@@ -38,16 +38,16 @@
     },
     {
       "nome": "1",
-      "pergunta": "Qual dos seguintes poderes o Homem Aranha não possui?",
-      "alternativa1": "INTELIGÊNCIA",
-      "alternativa2": "SENTIDO ARANHA",
-      "alternativa3": "AGILIDADE",
-      "alternativa4": "INVISIBILIDADE",
-      "resposta": "INVISIBILIDADE"
+      "pergunta": "Among the following powers, which one spider-man does not have?",
+      "alternativa1": "INTELLIGENCE",
+      "alternativa2": "SPIDER SENSE",
+      "alternativa3": "AGILITY",
+      "alternativa4": "INVISIBILITY",
+      "resposta": "INVISIBILITY"
     },
     {
       "nome": "2",
-      "pergunta": "Qual é o verdadeiro nome do Homem de Ferro?",
+      "pergunta": "What is Iron Man's real name?",
       "alternativa1": "TONY STARK",
       "alternativa2": "BRUCE WAYNE",
       "alternativa3": "PETER PARKER",
@@ -56,16 +56,16 @@
     },
     {
       "nome": "2",
-      "pergunta": "Qual das seguintes características o Homem de Ferro não possui?",
-      "alternativa1": "GÊNIO",
-      "alternativa2": "BILIONÁRIO",
-      "alternativa3": "HUMILDE",
-      "alternativa4": "FILÂNTROPO",
-      "resposta": "HUMILDE"
+      "pergunta": "Among the following characteristcs, which one Iron Man does not have?",
+      "alternativa1": "GENIUS",
+      "alternativa2": "BILLIONAIRE",
+      "alternativa3": "HUMBLE",
+      "alternativa4": "PHLANTHROPIST",
+      "resposta": "HUMBLE"
     },
     {
       "nome": "2",
-      "pergunta": "Quantos filmes existem sobre o Homem de Ferro?",
+      "pergunta": "How many Iron Man movies are there?",
       "alternativa1": "2",
       "alternativa2": "3",
       "alternativa3": "4",
@@ -74,7 +74,7 @@
     },
     {
       "nome": "2",
-      "pergunta": "Quando foi lançado o primeiro filme do Homem de Ferro?",
+      "pergunta": "When was the first Iron Man movie released?",
       "alternativa1": "2008",
       "alternativa2": "2007",
       "alternativa3": "2009",
@@ -83,7 +83,7 @@
     },
     {
       "nome": "2",
-      "pergunta": "Qual o nome da Inteligência Artifical de seu traje?",
+      "pergunta": "What is Iron Man armor's artificial intelligence called?",
       "alternativa1": "J.A.R.V.I.S",
       "alternativa2": "ULTRON",
       "alternativa3": "STARK",
@@ -92,7 +92,7 @@
     },
     {
       "nome": "3",
-      "pergunta": "Quando foi lançado o primeiro filme do Thor?",
+      "pergunta": "When was the first Thor movie released?",
       "alternativa1": "2010",
       "alternativa2": "2011",
       "alternativa3": "2008",
@@ -101,7 +101,7 @@
     },
     {
       "nome": "3",
-      "pergunta": "De qual reino Thor pertence?",
+      "pergunta": "What is the name of Thor's Kingdom",
       "alternativa1": "NOXUS",
       "alternativa2": "DEMACIA",
       "alternativa3": "PILTOLVER",
@@ -110,7 +110,7 @@
     },
     {
       "nome": "3",
-      "pergunta": "Thor é filho de:",
+      "pergunta": "Who is Thor's father",
       "alternativa1": "ASTRID",
       "alternativa2": "RAGNAR",
       "alternativa3": "ODIN",
@@ -119,7 +119,7 @@
     },
     {
       "nome": "3",
-      "pergunta": "Qual nome do martelo de Thor?",
+      "pergunta": "What is the name of Thor's hammer?",
       "alternativa1": "MJOLNIR",
       "alternativa2": "TARDIS",
       "alternativa3": "FREGGA",
@@ -128,16 +128,16 @@
     },
     {
       "nome": "3",
-      "pergunta": "Qual dos seguintes heróis conseguiram levantar o martelo de thor?",
-      "alternativa1": "CAPITÃO AMÉRICA",
-      "alternativa2": "HOMEM DE FERRO",
+      "pergunta": "Who was the hero able to lift Thor's hammer?",
+      "alternativa1": "AMERICAN CAPTAIN",
+      "alternativa2": "IRON MAN",
       "alternativa3": "HULK",
-      "alternativa4": "PANTERA NEGRA",
-      "resposta": "CAPITÃO AMÉRICA"
+      "alternativa4": "BLACK PANTHER",
+      "resposta": "AMERICAN CAPTAIN"
     },
     {
       "nome": "4",
-      "pergunta": "Qual o verdadeiro nome do Capitão América?",
+      "pergunta": "What is Captain America's real name?",
       "alternativa1": "STEVE ROGERS",
       "alternativa2": "TONY STARK",
       "alternativa3": "ARTHUR FLECK",
@@ -146,7 +146,7 @@
     },
     {
       "nome": "4",
-      "pergunta": "Quando foi lançado o primeiro filme do Capitão América?",
+      "pergunta": "When was the first Captain America movie released?",
       "alternativa1": "2012",
       "alternativa2": "2008",
       "alternativa3": "2011",
@@ -155,7 +155,7 @@
     },
     {
       "nome": "4",
-      "pergunta": "Em que ano nasceu o Capitão América?",
+      "pergunta": "When was Captain America born?",
       "alternativa1": "1918",
       "alternativa2": "1928",
       "alternativa3": "1938",
@@ -164,7 +164,7 @@
     },
     {
       "nome": "4",
-      "pergunta": "Do que é composto o escudo do Capitão América?",
+      "pergunta": "What is Captain America's shield made of?",
       "alternativa1": "ADAMANTIUM",
       "alternativa2": "VIBRANIUM",
       "alternativa3": "APRAVIUM",
@@ -173,7 +173,7 @@
     },
     {
       "nome": "4",
-      "pergunta": "Qual o nome da namorada do Capitão América?",
+      "pergunta": "What is the name of Captain America's girlfriend?",
       "alternativa1": "PERRY",
       "alternativa2": "PETTY",
       "alternativa3": "PENNY",
